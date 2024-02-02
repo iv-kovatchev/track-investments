@@ -22,7 +22,7 @@ namespace backend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("backend.Models.Investment", b =>
+            modelBuilder.Entity("backend.Data.Models.Investment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,6 +45,9 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Value")
                         .HasColumnType("decimal(18,2)");
 
@@ -52,10 +55,12 @@ namespace backend.Migrations
 
                     b.HasIndex("InvestmentTypeId");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Investments", (string)null);
                 });
 
-            modelBuilder.Entity("backend.Models.InvestmentType", b =>
+            modelBuilder.Entity("backend.Data.Models.InvestmentType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,14 +80,49 @@ namespace backend.Migrations
                     b.ToTable("InvestmentTypes", (string)null);
                 });
 
-            modelBuilder.Entity("backend.Models.Investment", b =>
+            modelBuilder.Entity("backend.Data.Models.User", b =>
                 {
-                    b.HasOne("backend.Models.InvestmentType", null)
-                        .WithMany("Investments")
-                        .HasForeignKey("InvestmentTypeId");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users", (string)null);
                 });
 
-            modelBuilder.Entity("backend.Models.InvestmentType", b =>
+            modelBuilder.Entity("backend.Data.Models.Investment", b =>
+                {
+                    b.HasOne("backend.Data.Models.InvestmentType", null)
+                        .WithMany("Investments")
+                        .HasForeignKey("InvestmentTypeId");
+
+                    b.HasOne("backend.Data.Models.User", null)
+                        .WithMany("Investments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("backend.Data.Models.InvestmentType", b =>
+                {
+                    b.Navigation("Investments");
+                });
+
+            modelBuilder.Entity("backend.Data.Models.User", b =>
                 {
                     b.Navigation("Investments");
                 });

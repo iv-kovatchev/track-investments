@@ -1,4 +1,4 @@
-﻿using backend.Models;
+﻿using backend.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Data
@@ -11,11 +11,15 @@ namespace backend.Data
             
         }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<Investment> Investments { get; set; }
         public DbSet<InvestmentType> InvestmentTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>()
+                .ToTable("Users");
+
             modelBuilder.Entity<Investment>()
                 .ToTable("Investments");
 

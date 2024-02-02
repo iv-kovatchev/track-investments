@@ -136,3 +136,5 @@ C:\Users\Ivan\Desktop\track-investments\backend\obj\Debug\net8.0\backend.genrunt
 C:\Users\Ivan\Desktop\track-investments\backend\obj\Debug\net8.0\ref\backend.dll
 C:\Users\Ivan\Desktop\track-investments\backend\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Ivan\Desktop\track-investments\backend\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Ivan\Desktop\track-investments\backend\obj\Debug\net8.0\backend.sourcelink.json
+C:\Users\Ivan\Desktop\track-investments\backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
