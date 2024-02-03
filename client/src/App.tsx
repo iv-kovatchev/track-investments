@@ -1,9 +1,12 @@
 import React from 'react';
+import './App.scss';
+import Root from './Root';
 
 function App() {
   return (
-    <div>
-    </div>
+    <>
+      <Root />
+    </>
   );
 }
 
