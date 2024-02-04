@@ -1,0 +1,12 @@
+.rootSection {
+  min-height: 100vh;
+  padding: 24px;
+  position: relative;
+  left: 260px;
+  top: 0;
+  width: calc(100% - 260px);
+
+  &--sidebar-open {
+    width: calc(100% - 260px);
+  }
+}

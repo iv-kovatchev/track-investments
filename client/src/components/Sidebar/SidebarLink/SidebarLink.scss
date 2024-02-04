@@ -1,0 +1,39 @@
+@import "src/assets/styles/base/colors";
+
+.sidebarLink {
+  align-items: center;
+  color: $dark-green-400;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: $dark-green-200
+  }
+
+  &__link {
+    display: flex;
+
+    .sidebarLink__icon {
+      margin-right: 6px;
+    }
+
+    .sidebarLink__link-text {
+      display: block;
+    }
+  }
+
+  &__icon {
+
+    &--is-closed {
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+
+  &__link-text {
+    display: none;
+  }
+}

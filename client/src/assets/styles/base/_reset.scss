@@ -1,0 +1,72 @@
+@import "typography";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body-font-family;
+  min-height: 100vh;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $fw-bold;
+  line-height: $line-height-small;
+  letter-spacing: $letter-spacing;
+  color: $dark-green-400
+}
+
+h1 {
+  font-size: $fs-xxlarge;
+}
+
+h2 {
+  font-size: $fs-xlarge;
+}
+
+h3 {
+  font-size: $fs-medium;
+}
+
+h4 {
+  font-size: $fs-small;
+}
+
+h5 {
+  font-size: $fs-xsmall;
+}
+
+h6 {
+  font-size: $fs-xxsmall;
+}
+
+p {
+  font-size: $fs-small;
+  font-weight: $fw-normal;
+  line-height: $line-height-small;
+  letter-spacing: $letter-spacing;
+  color: $dark-green-400
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

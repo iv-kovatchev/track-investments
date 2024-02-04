@@ -1,7 +1,11 @@
+@import "fonts";
+@import "colors";
+
 $body-font-family: 'Play', sans-serif;
 
 $base-font-size: 16px;
 
+$fs-xxsmall: 0.6rem;  // 10px
 $fs-xsmall: 0.75rem;  // 12px
 $fs-small: 0.875rem;  // 14px
 $fs-medium: 1rem;     // 16px
@@ -9,15 +13,12 @@ $fs-large: 1.25rem;   // 20px
 $fs-xlarge: 1.5rem;   // 24px
 $fs-xxlarge: 2rem;    // 32px
 
-$line-height-xsmall: 1.4;
+$line-height-xsmall: 1.2;
 $line-height-small: 1.4;
 $line-height-medium: 1.6;
 $line-height-large: 1.8;
 
+$letter-spacing: normal;
+
 $fw-normal: 400;
 $fw-bold: 700;
-
-p {
-  font-size: $fs-small;
-
-}
