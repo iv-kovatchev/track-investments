@@ -3,9 +3,12 @@ import './Sidebar.scss';
 import { SidebarProps } from './types';
 import SidebarLink from './SidebarLink';
 import { useState } from 'react';
+import { SlArrowLeftCircle } from 'react-icons/sl';
 
 const Sidebar = ({ links }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(true);
+
+  const handleCollapse = () => setIsOpen(!isOpen);
 
   return (
     <div className={`sidebar ${isOpen ? 'sidebar--is-open' : ''}`}>
@@ -24,6 +27,10 @@ const Sidebar = ({ links }: SidebarProps) => {
             />
           )}
         </ul>
+      </div>
+
+      <div className='sidebar__collapse-icon'>
+        <SlArrowLeftCircle onClick={handleCollapse} />
       </div>
     </div>
   )

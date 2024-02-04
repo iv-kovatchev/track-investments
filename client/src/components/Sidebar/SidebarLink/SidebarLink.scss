@@ -12,28 +12,33 @@
   }
 
   &__link {
+    align-items: center;
     display: flex;
-
-    .sidebarLink__icon {
-      margin-right: 6px;
-    }
-
-    .sidebarLink__link-text {
-      display: block;
-    }
   }
 
   &__icon {
+    align-items: center;
+    display: flex;
 
-    &--is-closed {
-      svg {
-        height: 32px;
-        width: 32px;
-      }
+    svg {
+      height: 32px;
+      width: 32px;
     }
   }
 
   &__link-text {
     display: none;
+  }
+
+  &--is-open {
+    .sidebarLink__link-text {
+      display: block;
+    }
+
+    .sidebarLink__icon {
+      height: 20px;
+      margin-right: 10px;
+      width: 20px;
+    }
   }
 }

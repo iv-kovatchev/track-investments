@@ -14,16 +14,19 @@ const Root = () => {
               element={
                 <Grid
                   title='Investments'
-                  child={<Investments
-                  />}
+                  child={<Investments/>}
                 />}
             />
           )}
-          <Route path='/settings' element={<Settings />} />
+          <Route
+            path='/settings'
+            element={
+              <Grid
+                title='Settings'
+                child={<Settings />}
+              />}
+          />
           <Route path='/styleguide' element={<Styleguide />} />
-        {/*<Route path='/test'>*/}
-        {/*  <Route index element={<Investments />} />*/}
-        {/*</Route>*/}
       </Routes>
   )
 }
