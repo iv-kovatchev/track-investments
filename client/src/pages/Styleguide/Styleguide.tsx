@@ -1,5 +1,32 @@
 import React from 'react';
 import './Styleguide.scss'
+import Button from '../../components/shared/Button';
+import { FaArrowLeft } from 'react-icons/fa6';
+import Table from '../../components/shared/Table';
+
+const tableData = [
+  {
+    name: 'Test1',
+    status: 'ACTIVE',
+    date: new Date().toLocaleDateString(),
+    value: 2222.22,
+    button: <Button name='Delete' type='primary'/>
+  },
+  {
+    name: 'Test2',
+    status: 'ACTIVE',
+    date: new Date().toLocaleDateString(),
+    value: 2222.22,
+    button: <Button name='Delete' type='primary'/>
+  },
+  {
+    name: 'Test3',
+    status: 'ACTIVE',
+    date: new Date().toLocaleDateString(),
+    value: 2222.22,
+    button: <Button name='Delete' type='primary'/>
+  }
+]
 
 const Styleguide = () => {
   return (
@@ -15,6 +42,36 @@ const Styleguide = () => {
         <h6>Heading 6</h6>
         <p>Paragraph</p>
         <p>Paragraph</p>
+      </div>
+
+      <br />
+
+      <div>
+        <div>
+          <Button
+            name="Primary"
+            type="primary"
+            icon={<FaArrowLeft />}
+          />
+        </div>
+
+        <br/>
+
+        <div>
+          <Button
+            name="Secondary"
+            type="secondary"
+          />
+        </div>
+      </div>
+
+      <br />
+
+      <div>
+        <Table
+          columns={['Name', 'Status', 'Date', 'Value', '']}
+          data={tableData}
+        />
       </div>
     </>
   )

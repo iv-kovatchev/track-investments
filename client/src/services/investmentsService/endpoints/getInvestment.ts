@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchData } from '../../index';
-import { Investment } from '../../types';
+import { Investment } from '../types';
 
 const useGetInvestment = (investmentId: number) => {
   const { data, error, isLoading, ...args } = useQuery<Investment, Error>({

@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { mutationData } from '../../index';
-import { Investment } from '../../types';
+import { Investment } from '../types';
 
 const useDeleteInvestment = (id: string) => {
   const queryClient = useQueryClient();

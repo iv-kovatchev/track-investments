@@ -1,0 +1,46 @@
+@import "../../../assets/styles/base/colors";
+
+.table-container {
+  border-radius: 6px;
+  box-shadow: $box-shadow;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table {
+  border-radius: 6px;
+  border-collapse: collapse;
+  width: 100%;
+
+  &__thead tr {
+    background-color: $dark-green-200;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  &__th, &__td {
+    border-left: 0 solid;
+    border-right: 0 solid;
+    padding: 12px;
+    text-align: left;
+  }
+
+  &__tbody tr:nth-of-type(even) {
+    background-color: $gray-100;
+  }
+
+  &__tbody tr {
+    &:hover {
+      td {
+        color: $dark-green-200;
+      }
+    }
+  }
+
+  &__no-data {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    width: 100%;
+  }
+}

@@ -10,7 +10,7 @@ const fetchData = async <T>(url: string): Promise<T> => {
     });
 
     //This is for testing purposes
-    await requestPause();
+    //await requestPause();
 
     if(!response.ok) {
       throw new Error('There is a error with fetching the data');
@@ -29,7 +29,7 @@ const mutationData = async <T>({ url, method, data }: MutationDataProps<T>): Pro
   })
 
   //This is for testing purposes
-  await requestPause();
+  //await requestPause();
 
   if(!response.ok) {
     throw new Error('Failed to mutate the data');

@@ -11,6 +11,7 @@
   top: 0;
   transition: width 0.8s ease;
   width: 60px;
+  z-index: 99;
 
   &--is-open {
     width: 260px;
