@@ -4,3 +4,9 @@ export interface Investment {
   date: string,
   value: number
 }
+
+export interface MutationDataProps<T> {
+  url: string;
+  method: string;
+  data?: T
+}

@@ -1,12 +1,69 @@
 {
   "users": [
     {
-      "id": 1, "first_name": "Ivan", "second_name": "Kovachev", "age": 31
+      "id": "1",
+      "first_name": "Ivan",
+      "second_name": "Kovachev",
+      "age": 31
     }
   ],
   "investments": [
-    { "id": 1, "status": "Active", "date": "12.02.2024", "name": "First investment", "value": 222.33, "userId": 1 },
-    { "id": 2, "status": "Active", "date": "15.06.2024", "name": "First investment", "value": 1111, "userId": 1 },
-    { "id": 3, "status": "Closed", "date": "20.01.2024", "name": "First investment", "value": 562.11, "userId": 1 }
+    {
+      "name": "updated2",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024",
+      "id": "1"
+    },
+    {
+      "id": "3",
+      "status": "Closed",
+      "date": "20.01.2024",
+      "name": "First investment",
+      "value": 562.11,
+      "userId": 1
+    },
+    {
+      "id": "ca53",
+      "name": "test create",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024"
+    },
+    {
+      "id": "456c",
+      "name": "test create",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024"
+    },
+    {
+      "id": "a142",
+      "name": "test create",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024"
+    },
+    {
+      "id": "10a6",
+      "name": "test create",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024"
+    },
+    {
+      "id": "6ff7",
+      "name": "test create",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024"
+    },
+    {
+      "id": "4fc3",
+      "name": "test create",
+      "value": 2222.22,
+      "status": "ACTIVE",
+      "date": "2/5/2024"
+    }
   ]
 }
