@@ -1,7 +1,9 @@
 import { TableProps } from './types';
 import './Table.scss';
 
-const Table = <T extends object> ({columns, data, extendClassname}: TableProps<T>) => {
+const Table = <T extends object> ({ columns, data, extendClassname }: TableProps<T>) => {
+  console.log('wat');
+
   return (
     <div className='table-container'>
       {
@@ -27,10 +29,22 @@ const Table = <T extends object> ({columns, data, extendClassname}: TableProps<T
           }
           </tbody>
         </table> :
-        <div className='table__no-data'>
-          <h2>No data</h2>
-        </div>
+          <div>
 
+            <table>
+              <thead className="table__thead">
+              <tr>
+                {columns.map ((column, index) => {
+                  return (<th key={index} className="table__th">{column}</th>)
+                })}
+              </tr>
+              </thead>
+            </table>
+
+            <div className="table__no-data">
+              <h2>No data</h2>
+            </div>
+          </div>
       }
     </div>
   )

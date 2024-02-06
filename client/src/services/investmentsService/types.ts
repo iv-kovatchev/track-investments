@@ -7,6 +7,7 @@ type Type =
   'Land'
 
 export interface Investment {
+  id: string,
   name: string,
   status: string,
   date: string,

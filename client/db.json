@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": "22",
       "first_name": "Ivan",
       "last_name": "Kovachev",
       "age": 31
@@ -15,47 +15,12 @@
   ],
   "investments": [
     {
-      "name": "updated2",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024",
-      "id": "1"
-    },
-    {
       "id": "3",
       "status": "Closed",
       "date": "20.01.2024",
       "name": "First investment",
       "value": 562.11,
-      "userId": 1
-    },
-    {
-      "id": "ca53",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024"
-    },
-    {
-      "id": "456c",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024"
-    },
-    {
-      "id": "a142",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024"
-    },
-    {
-      "id": "10a6",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024"
+      "userId": "22"
     },
     {
       "id": "6ff7",
@@ -69,31 +34,8 @@
       "name": "test create",
       "value": 2222.22,
       "status": "ACTIVE",
-      "date": "2/5/2024"
-    },
-    {
-      "id": "4fc3",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
       "date": "2/5/2024",
       "type": "Crypto"
-    },
-    {
-      "id": "03fb",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "78f8",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024",
-      "type": "Cash"
     },
     {
       "id": "b7e3",
@@ -113,14 +55,6 @@
     },
     {
       "id": "3b99",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "9df8",
       "name": "test create",
       "value": 2222.22,
       "status": "ACTIVE",
@@ -157,38 +91,6 @@
       "value": 2222.22,
       "status": "ACTIVE",
       "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "66cf",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/6/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "b998",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/6/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "828d",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/6/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "603b",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/6/2024",
       "type": "Cash"
     }
   ]

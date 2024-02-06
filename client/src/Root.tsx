@@ -5,6 +5,8 @@ import Styleguide from './pages/Styleguide';
 import Grid from './components/shared/Grid';
 
 const Root = () => {
+  console.log('render root');
+
   return (
       <Routes>
           {['/', '/investments'].map((path) =>

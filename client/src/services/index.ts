@@ -21,7 +21,8 @@ const fetchData = async <T>(url: string): Promise<T> => {
   }
   catch (error) {
     console.log(error);
-    throw new Error('There was a network error!')
+
+    throw Error('There was a network error!')
   }
 }
 

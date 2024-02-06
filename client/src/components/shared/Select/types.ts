@@ -5,7 +5,7 @@ export interface SelectOption {
 
 export interface SelectProps {
   options:  SelectOption[];
-  onChange: (selectedOption: string) => void;
+  onChange: (selectedOption: SelectOption) => void;
   selectedValue: string | null,
   placeholder: string
 }

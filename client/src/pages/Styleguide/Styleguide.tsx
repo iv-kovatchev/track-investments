@@ -4,6 +4,7 @@ import Button from '../../components/shared/Button';
 import { FaArrowLeft } from 'react-icons/fa6';
 import Table from '../../components/shared/Table';
 import Select from '../../components/shared/Select';
+import { SelectOption } from '../../components/shared/Select/types';
 
 const tableData = [
   {
@@ -58,7 +59,7 @@ const Styleguide = () => {
 
   console.log(currentOption);
 
-  const handleSelectChange = (value: string) => setCurrentOption(value)
+  const handleSelectChange = (option: SelectOption) => setCurrentOption(option.label)
 
   const handleClick = () => setTestState(!testState);
   return (

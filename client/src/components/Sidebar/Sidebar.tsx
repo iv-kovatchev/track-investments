@@ -3,9 +3,10 @@ import './Sidebar.scss';
 import { SidebarProps } from './types';
 import SidebarLink from './SidebarLink';
 import { SlArrowLeftCircle } from 'react-icons/sl';
-import Select from '../shared/Select';
 import useSidebar from './useSidebar';
 import UsersDropdown from './UsersDropdown';
+import { useContext } from 'react';
+import { UserContext } from '../../utils/contexts/UserContext';
 
 const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
   const { handleCollapse } = useSidebar({ isOpen, collapseSidebar })

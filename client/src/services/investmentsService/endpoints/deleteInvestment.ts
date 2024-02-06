@@ -5,18 +5,17 @@ import { Investment } from '../types';
 const useDeleteInvestment = (id: string) => {
   const queryClient = useQueryClient();
 
-  const { mutate: removeInvestment, data, isError, isPending, ...args  } = useMutation({
+  const { mutate: removeInvestment, isError, isPending, ...args  } = useMutation({
     mutationKey: ['deleteInvestment'],
     mutationFn: () => mutationData<Investment>({
       url: `investments/${id}`,
       method: 'DELETE'
     }),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['allInvestments'] })
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['investmentsByUser'] })
   });
 
   return {
     removeInvestment,
-    data,
     isError,
     isPending,
     args

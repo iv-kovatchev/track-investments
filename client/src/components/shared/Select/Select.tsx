@@ -1,20 +1,18 @@
 import './Select.scss';
-import { SelectProps } from './types';
+import { SelectOption, SelectProps } from './types';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useState } from 'react';
 
 const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) => {
-  console.log('render Select');
-
   const [ isOpen, setIsOpen ] = useState(false);
 
   const handleOpenMenu = () => {
     setIsOpen(!isOpen);
   }
 
-  const handleSelectedOption = (value: string) => {
+  const handleSelectedOption = (option: SelectOption) => {
     setIsOpen(!isOpen);
-    onChange(value)
+    onChange(option)
   }
 
   return (
@@ -30,7 +28,7 @@ const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) 
         {
           isOpen && options.map((option, index) => { return (
             <div
-              onClick={() => handleSelectedOption(option.value)}
+              onClick={() => handleSelectedOption(option)}
               key={index}
               className='select__option'>
               <p>{option.label}</p>
