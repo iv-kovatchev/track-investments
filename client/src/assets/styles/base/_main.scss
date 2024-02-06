@@ -2,11 +2,24 @@
   min-height: 100vh;
   padding: 24px;
   position: relative;
-  left: 260px;
   top: 0;
-  width: calc(100% - 260px);
+  transition: width 0.8s ease, left 0.8s ease;
+  width: calc(100% - 60px);
+  left: 60px;
 
   &--sidebar-open {
+    left: 260px;
     width: calc(100% - 260px);
+  }
+
+  @keyframes reduceWidth {
+    from {
+      left: 260px;
+      width: calc(100% - 260px);
+    }
+    to {
+      left: 60px;
+      width: calc(100% - 60px);
+    }
   }
 }

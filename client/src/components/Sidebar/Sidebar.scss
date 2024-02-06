@@ -10,6 +10,7 @@
   position: fixed;
   top: 0;
   transition: width 0.8s ease;
+  transform-origin: left;
   width: 60px;
   z-index: 99;
 
@@ -38,7 +39,7 @@
     display: flex;
     margin-bottom: 24px;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease;
   }
 
   &__logo {

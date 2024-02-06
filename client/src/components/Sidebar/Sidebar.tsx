@@ -2,13 +2,10 @@ import logo from '../../assets/images/investment-logo.png';
 import './Sidebar.scss';
 import { SidebarProps } from './types';
 import SidebarLink from './SidebarLink';
-import { useState } from 'react';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 
-const Sidebar = ({ links }: SidebarProps) => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  const handleCollapse = () => setIsOpen(!isOpen);
+const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
+  const handleCollapse = () => collapseSidebar(!isOpen);
 
   return (
     <div className={`sidebar ${isOpen ? 'sidebar--is-open' : ''}`}>
