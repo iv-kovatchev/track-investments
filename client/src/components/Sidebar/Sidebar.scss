@@ -1,6 +1,7 @@
 @import "src/assets/styles/base/colors";
 
 .sidebar {
+  background-color: $white;
   box-shadow: $box-shadow;
   display: flex;
   flex-direction: column;
@@ -21,6 +22,10 @@
     .sidebar__header {
       opacity: 1;
       transition: opacity 0.2s ease;
+    }
+
+    .sidebar__users-dropdown {
+      display: block;
     }
 
     .sidebarLink {
@@ -64,5 +69,10 @@
       height: auto;
       width: 100%;
     }
+  }
+
+  &__users-dropdown {
+    margin-bottom: 16px;
+    display: none;
   }
 }

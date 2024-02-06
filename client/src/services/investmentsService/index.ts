@@ -1,13 +1,13 @@
-import useGetAllInvestments from './endpoints/getAllInvestments';
-import useGetInvestment from './endpoints/getInvestment';
-import useCreateInvestment from './endpoints/createInvestment';
-import useUpdateInvestment from './endpoints/updateInvestment';
-import useDeleteInvestment from './endpoints/deleteInvestment';
+import getAllInvestments from './endpoints/getAllInvestments';
+import getInvestment from './endpoints/getInvestment';
+import createInvestment from './endpoints/createInvestment';
+import updateInvestment from './endpoints/updateInvestment';
+import deleteInvestment from './endpoints/deleteInvestment';
 
 export {
-  useGetAllInvestments,
-  useGetInvestment,
-  useCreateInvestment,
-  useUpdateInvestment,
-  useDeleteInvestment
+  getAllInvestments,
+  getInvestment,
+  createInvestment,
+  updateInvestment,
+  deleteInvestment
 };

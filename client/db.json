@@ -3,7 +3,13 @@
     {
       "id": "1",
       "first_name": "Ivan",
-      "second_name": "Kovachev",
+      "last_name": "Kovachev",
+      "age": 31
+    },
+    {
+      "id": "2",
+      "first_name": "Peter",
+      "last_name": "Ivanov",
       "age": 31
     }
   ],

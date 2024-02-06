@@ -1,15 +1,12 @@
 import { Link } from 'react-router-dom';
 import {
-  useCreateInvestment,
-  useGetAllInvestments,
-  useGetInvestment,
-  useUpdateInvestment,
-  useDeleteInvestment
+  createInvestment,
+  updateInvestment,
+  deleteInvestment
 } from '../../services/investmentsService';
 import { currentDate } from '../../utils/config/currentDate';
 import Table from '../../components/shared/Table';
 import { investmentsColumns } from './types';
-import { Investment } from '../../services/investmentsService/types';
 import useInvestments from './useInvestments';
 
 const Investments = (): JSX.Element => {
@@ -19,7 +16,7 @@ const Investments = (): JSX.Element => {
 
  // const { data, isError, isLoading, args } = useGetAllInvestments();
  // const { data: data2, error: error2, isLoading: isLoading2 } = useGetInvestment(3);
-  const { addInvestment, data: data3, isError, isPending } = useCreateInvestment({
+  const { addInvestment, data: data3, isError, isPending } = createInvestment({
     name: 'test create',
     value: 2222.22,
     status: 'ACTIVE',
@@ -31,21 +28,21 @@ const Investments = (): JSX.Element => {
     data: data4,
     isError: error4,
     isPending: isPending2
-  } = useUpdateInvestment('1', {
+  } = updateInvestment('1', {
     name: 'updated2',
     value: 2222.22,
     status: 'ACTIVE',
     date: currentDate(),
     type: 'Crypto'
   });
-  const { deleteInvestment, data: data5, isError: isError3, isPending: isPending5 } = useDeleteInvestment('ee4f');
+  const { removeInvestment, data: data5, isError: isError3, isPending: isPending5 } = deleteInvestment('ee4f');
 
   const handleSubmitInvestment = () => {
     addInvestment();
   }
 
   const handleUpdateInvestment = () => editInvestment();
-  const handleDeleteInvestment = () => deleteInvestment();
+  const handleDeleteInvestment = () => removeInvestment();
 
  // console.log(data);
 
@@ -59,19 +56,16 @@ const Investments = (): JSX.Element => {
       <button onClick={handleUpdateInvestment}>Update investment</button>
       <button onClick={handleDeleteInvestment}>Delete investment</button>
 
-      {isLoading &&
-        <div>Loading...</div>}
-
-      {isSuccess &&
+      {isLoading ?
+        <div>Loading...</div>  :
         <Table
           columns={investmentsColumns}
           data={
-          data?.map(({ name, type, value, status, date }) =>
-            ({ name, type, value, status, date }))
-        }
+            data?.map(({ name, type, value, status, date }) =>
+              ({ name, type, value, status, date }))
+          }
         />
       }
-
     </>
   )
 }

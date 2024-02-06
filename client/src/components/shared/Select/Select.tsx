@@ -3,30 +3,7 @@ import { SelectProps } from './types';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useState } from 'react';
 
-const options = [
-  {
-    label: 'Ivan',
-    value: 'vankata'
-  },
-  {
-    label: 'Rayna',
-    value: 'rayna'
-  },
-  {
-    label: 'GoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGoshoGosho',
-    value: 'gosho'
-  },
-  {
-    label: 'Ivan',
-    value: 'vankata'
-  },
-  {
-    label: 'Rayna',
-    value: 'rayna'
-  }
-]
-
-const Select = ({ onChange, selectedValue }: SelectProps) => {
+const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) => {
   console.log('render Select');
 
   const [ isOpen, setIsOpen ] = useState(false);
@@ -35,7 +12,7 @@ const Select = ({ onChange, selectedValue }: SelectProps) => {
     setIsOpen(!isOpen);
   }
 
-  const handleSelectedOption = (value: string | number) => {
+  const handleSelectedOption = (value: string) => {
     setIsOpen(!isOpen);
     onChange(value)
   }
@@ -43,7 +20,7 @@ const Select = ({ onChange, selectedValue }: SelectProps) => {
   return (
     <div className='select'>
       <div className='select__main' onClick={handleOpenMenu}>
-        <p>{selectedValue ?? 'Placeholder...'}</p>
+        <p>{selectedValue ?? placeholder}</p>
         <i
           className={`select__arrow-icon ${isOpen ? 'select__arrow-icon--is-open' : ''}`}>
           <IoIosArrowDown/>

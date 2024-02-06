@@ -1,10 +1,14 @@
 @import "../../../assets/styles/base/colors";
 
 .select {
+  position: relative;
+  z-index: 100;
+
   &__main {
     align-items: center;
     border: 1px solid $dark-green-200;
     border-radius: 6px;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding: 8px;
@@ -21,8 +25,11 @@
   }
 
   &__options-menu {
+    background-color: $white;
     border-radius: 6px;
     box-shadow: $box-shadow;
+    position: absolute;
+    width: 100%;
   }
 
   &__option {

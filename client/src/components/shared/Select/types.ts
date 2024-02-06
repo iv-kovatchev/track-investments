@@ -1,10 +1,11 @@
 export interface SelectOption {
   label: string;
-  value: string | number;
+  value: string;
 }
 
 export interface SelectProps {
-  //options:  SelectOption[];
-  onChange: (selectedOption: string | number) => void;
-  selectedValue: string | number | null
+  options:  SelectOption[];
+  onChange: (selectedOption: string) => void;
+  selectedValue: string | null,
+  placeholder: string
 }

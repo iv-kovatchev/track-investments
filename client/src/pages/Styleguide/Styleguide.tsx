@@ -29,13 +29,36 @@ const tableData = [
   }
 ];
 
+const options = [
+  {
+    label: 'Ivan',
+    value: 'vankata'
+  },
+  {
+    label: 'Rayna',
+    value: 'rayna'
+  },
+  {
+    label: 'Gosho',
+    value: 'gosho'
+  },
+  {
+    label: 'Ivan',
+    value: 'vankata'
+  },
+  {
+    label: 'Rayna',
+    value: 'rayna'
+  }
+]
+
 const Styleguide = () => {
   const [ testState, setTestState ] = useState(true);
-  const [ currentOption, setCurrentOption ] = useState<string | number | null>(null);
+  const [ currentOption, setCurrentOption ] = useState<string | null>(null);
 
   console.log(currentOption);
 
-  const handleSelectChange = (value: string | number) => setCurrentOption(value)
+  const handleSelectChange = (value: string) => setCurrentOption(value)
 
   const handleClick = () => setTestState(!testState);
   return (
@@ -87,7 +110,12 @@ const Styleguide = () => {
       <br/>
 
       <div>
-        <Select onChange={handleSelectChange} selectedValue={currentOption} />
+        <Select
+          onChange={handleSelectChange}
+          selectedValue={currentOption}
+          placeholder='Select...'
+          options={options}
+        />
       </div>
     </>
   )

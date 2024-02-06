@@ -3,9 +3,12 @@ import './Sidebar.scss';
 import { SidebarProps } from './types';
 import SidebarLink from './SidebarLink';
 import { SlArrowLeftCircle } from 'react-icons/sl';
+import Select from '../shared/Select';
+import useSidebar from './useSidebar';
+import UsersDropdown from './UsersDropdown';
 
 const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
-  const handleCollapse = () => collapseSidebar(!isOpen);
+  const { handleCollapse } = useSidebar({ isOpen, collapseSidebar })
 
   return (
     <div className={`sidebar ${isOpen ? 'sidebar--is-open' : ''}`}>
@@ -13,6 +16,8 @@ const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
           <img src={logo} alt='logo' className='sidebar__logo' />
           <h2 className='sidebar__title'>Investments Track</h2>
       </div>
+
+      <UsersDropdown />
 
       <div>
         <ul>

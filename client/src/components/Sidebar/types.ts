@@ -14,3 +14,5 @@ export interface SidebarLinkProps {
   link: Link;
   isSidebarOpen: boolean;
 }
+
+export interface UseSidebarProps extends Pick<SidebarProps, 'isOpen' | 'collapseSidebar'> {}

@@ -2,6 +2,7 @@ import { requestPause } from '../utils/config/requestPause';
 import { MutationDataProps } from './types';
 
 const fetchData = async <T>(url: string): Promise<T> => {
+  try {
     const response = await fetch(`http://localhost:3001/${url}`, {
       method: 'GET',
       headers: {
@@ -10,13 +11,18 @@ const fetchData = async <T>(url: string): Promise<T> => {
     });
 
     //This is for testing purposes
-    //await requestPause();
+    await requestPause();
 
     if(!response.ok) {
       throw new Error('There is a error with fetching the data');
     }
 
-    return  await response.json();
+    return await response.json();
+  }
+  catch (error) {
+    console.log(error);
+    throw new Error('There was a network error!')
+  }
 }
 
 const mutationData = async <T>({ url, method, data }: MutationDataProps<T>): Promise<T> => {
@@ -29,7 +35,7 @@ const mutationData = async <T>({ url, method, data }: MutationDataProps<T>): Pro
   })
 
   //This is for testing purposes
-  //await requestPause();
+  await requestPause();
 
   if(!response.ok) {
     throw new Error('Failed to mutate the data');
