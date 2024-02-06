@@ -1,6 +1,7 @@
 import './Select.scss';
 import { SelectProps } from './types';
 import { IoIosArrowDown } from 'react-icons/io';
+import { useState } from 'react';
 
 const options = [
   {
