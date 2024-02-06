@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Styleguide.scss'
 import Button from '../../components/shared/Button';
 import { FaArrowLeft } from 'react-icons/fa6';
 import Table from '../../components/shared/Table';
+import Select from '../../components/shared/Select';
 
 const tableData = [
   {
@@ -26,9 +27,17 @@ const tableData = [
     value: 2222.22,
     button: <Button name='Delete' type='primary'/>
   }
-]
+];
 
 const Styleguide = () => {
+  const [ testState, setTestState ] = useState(true);
+  const [ currentOption, setCurrentOption ] = useState<string | number | null>(null);
+
+  console.log(currentOption);
+
+  const handleSelectChange = (value: string | number) => setCurrentOption(value)
+
+  const handleClick = () => setTestState(!testState);
   return (
     <>
       <div className='test'>Test sass</div>
@@ -44,14 +53,15 @@ const Styleguide = () => {
         <p>Paragraph</p>
       </div>
 
-      <br />
+      <br/>
 
       <div>
         <div>
           <Button
             name="Primary"
             type="primary"
-            icon={<FaArrowLeft />}
+            onClick={handleClick}
+            icon={<FaArrowLeft/>}
           />
         </div>
 
@@ -65,13 +75,19 @@ const Styleguide = () => {
         </div>
       </div>
 
-      <br />
+      <br/>
 
       <div>
         <Table
           columns={['Name', 'Status', 'Date', 'Value', '']}
           data={tableData}
         />
+      </div>
+
+      <br/>
+
+      <div>
+        <Select onChange={handleSelectChange} selectedValue={currentOption} />
       </div>
     </>
   )

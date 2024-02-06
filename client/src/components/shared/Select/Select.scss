@@ -1,0 +1,56 @@
+@import "../../../assets/styles/base/colors";
+
+.select {
+  &__main {
+    align-items: center;
+    border: 1px solid $dark-green-200;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  &__arrow-icon {
+    display: flex;
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+
+    &--is-open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__options-menu {
+    border-radius: 6px;
+    box-shadow: $box-shadow;
+  }
+
+  &__option {
+    cursor: pointer;
+    padding: 8px;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    &:hover {
+      background-color: $dark-green-200;
+
+      p {
+        color: $white;
+      }
+    }
+  }
+}

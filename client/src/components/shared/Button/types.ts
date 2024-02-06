@@ -6,4 +6,5 @@ export interface ButtonProps {
   name: string;
   type: ButtonType;
   icon?: JSX.Element;
+  onClick?: () => void;
 }
