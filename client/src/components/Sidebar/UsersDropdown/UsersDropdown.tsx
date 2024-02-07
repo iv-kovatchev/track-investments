@@ -1,5 +1,7 @@
 import Select from '../../shared/Select';
 import useUsersDropdown from './useUsersDropdown';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const UsersDropdown = () => {
   const { isLoading, userOptions, selectedUser, handleSelectedUser } = useUsersDropdown();
@@ -7,8 +9,7 @@ const UsersDropdown = () => {
   return (
     <div className='sidebar__users-dropdown'>
       {isLoading ?
-        <div>Loading</div> :
-
+        <Skeleton height={38} /> :
         <Select
           onChange={handleSelectedUser}
           selectedValue={selectedUser}

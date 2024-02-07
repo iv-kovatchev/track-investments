@@ -7,6 +7,8 @@ import { investmentsColumns } from './types';
 import useInvestments from './useInvestments';
 import { useContext } from 'react';
 import { UserContext } from '../../utils/contexts/UserContext';
+import Button from '../../components/shared/Button';
+import './Investments.scss';
 
 const Investments = (): JSX.Element => {
   const { currentUser } = useContext(UserContext);
@@ -16,19 +18,17 @@ const Investments = (): JSX.Element => {
   console.log('re-render ' + data);
 
   return (
-    <>
-      <div>Investments page</div>
-      <Link to='/settings'>Go to Settings</Link>
-      <Link to='/styleguide'>Go to Styleguide</Link>
+    <div className='investments'>
+      <div className="investments__add-button">
+        <Button name='Add investment' type='primary'/>
+      </div>
 
-      {isLoading ?
-        <div>Loading...</div>  :
-        <Table
-          columns={investmentsColumns}
-          data={tableData}
-        />
-      }
-    </>
+      <Table
+        columns={investmentsColumns}
+        data={tableData}
+        isLoading={isLoading}
+      />
+    </div>
   )
 }
 

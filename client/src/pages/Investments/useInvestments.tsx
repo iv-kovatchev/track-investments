@@ -1,7 +1,5 @@
 import { getInvestmentsByUserId } from '../../services/investmentsService';
 import { UseInvestmentsProps } from './types';
-import Button from '../../components/shared/Button';
-import useDeleteInvestment from '../../services/investmentsService/endpoints/deleteInvestment';
 import DeleteButton from './DeleteButton';
 
 const useInvestments = ({ currentUser }: UseInvestmentsProps) => {
@@ -16,15 +14,14 @@ const useInvestments = ({ currentUser }: UseInvestmentsProps) => {
   }
 
   const tableData = data?.map(
-    ({ name, value, status, type, date, id }) =>
-      ({
-        name,
-        type,
-        value,
-        status,
-        date,
-        deleteButton: <DeleteButton investmentId={id} />
-      }))
+    (investment) => ({
+      name: investment.name,
+      type: investment.type,
+      value: investment.value,
+      status: investment.status,
+      date: investment.date,
+      deleteButton: <DeleteButton investment={investment} />
+    }))
 
   return {
     isLoading,

@@ -15,18 +15,10 @@
   ],
   "investments": [
     {
-      "id": "3",
-      "status": "Closed",
-      "date": "20.01.2024",
-      "name": "First investment",
-      "value": 562.11,
-      "userId": "22"
-    },
-    {
       "id": "6ff7",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024"
     },
     {
@@ -49,7 +41,7 @@
       "id": "c9d8",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024",
       "type": "Cash"
     },
@@ -73,7 +65,7 @@
       "id": "51af",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024",
       "type": "Cash"
     },
@@ -81,15 +73,7 @@
       "id": "f7e7",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "e598",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024",
       "type": "Cash"
     }

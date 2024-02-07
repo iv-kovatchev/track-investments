@@ -1,4 +1,5 @@
 import { CurrentUser } from '../../utils/contexts/UserContext';
+import { Investment } from '../../services/investmentsService/types';
 
 export const investmentsColumns = [
   'Name',
@@ -14,5 +15,5 @@ export interface UseInvestmentsProps {
 }
 
 export interface DeleteButtonProps {
-  investmentId: string;
+  investment: Investment;
 }

@@ -1,16 +1,16 @@
 import { DeleteButtonProps } from '../types';
-import useDeleteInvestment from '../../../services/investmentsService/endpoints/deleteInvestment';
 import Button from '../../../components/shared/Button';
 import './DeleteButton.scss';
+import useUpdateInvestment from '../../../services/investmentsService/endpoints/updateInvestment';
 
-const DeleteButton = ({ investmentId }: DeleteButtonProps) => {
-  const { removeInvestment,  } = useDeleteInvestment(investmentId);
+const DeleteButton = ({ investment }: DeleteButtonProps) => {
+  const { editInvestment  } = useUpdateInvestment({...investment, status: 'Closed'});
 
-  const handleDelete = () => removeInvestment();
+  const handleUpdateInvestment = () => editInvestment();
 
   return (
     <div className='investments-table__delete-button'>
-      <Button name='Delete' type='primary' onClick={handleDelete} />
+      <Button name='Close' type='primary' onClick={handleUpdateInvestment} />
     </div>
   )
 }

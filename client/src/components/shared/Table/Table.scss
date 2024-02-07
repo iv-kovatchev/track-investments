@@ -1,8 +1,9 @@
 @import "../../../assets/styles/base/colors";
 
 .table-container {
-  border-radius: 6px;
+  background-color: $white;
   box-shadow: $box-shadow;
+  border-radius: 6px;
   overflow-x: auto;
   max-width: 100%;
 }
@@ -33,6 +34,20 @@
     &:hover {
       td {
         color: $dark-green-200;
+      }
+    }
+  }
+
+  &__skeleton {
+    &--th {
+      margin-bottom: 12px;
+    }
+
+    &--td {
+      margin-top: 6px;
+
+      &:last-child {
+        margin-top: 0;
       }
     }
   }
