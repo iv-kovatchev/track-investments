@@ -1,11 +1,6 @@
-@import "../../assets/styles/base/colors";
-
 .test {
-  background-color: $dark-green-100;
+  background-color: var(--dark-green-100);
   height: 200px;
   width: 200px;
-  box-shadow: $box-shadow;
-}
-
-.test-h1 {
+  box-shadow: var(--box-shadow);
 }

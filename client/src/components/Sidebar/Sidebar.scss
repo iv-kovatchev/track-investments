@@ -1,8 +1,6 @@
-@import "src/assets/styles/base/colors";
-
 .sidebar {
-  background-color: $white;
-  box-shadow: $box-shadow;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   left: 0;
@@ -54,7 +52,7 @@
   }
 
   &__collapse-icon {
-    background-color: $white;
+    background-color: var(--white);
     cursor: pointer;
     display: flex;
     height: 24px;

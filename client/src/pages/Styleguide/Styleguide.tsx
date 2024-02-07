@@ -5,6 +5,7 @@ import { FaArrowLeft } from 'react-icons/fa6';
 import Table from '../../components/shared/Table';
 import Select from '../../components/shared/Select';
 import { SelectOption } from '../../components/shared/Select/types';
+import Spinner from '../../components/shared/Spinner';
 
 const tableData = [
   {
@@ -64,10 +65,10 @@ const Styleguide = () => {
   const handleClick = () => setTestState(!testState);
   return (
     <>
-      <div className='test'>Test sass</div>
+      <div className="test">Test sass</div>
 
       <div>
-        <h1 className='test-h1'>Heading 1</h1>
+        <h1 className="test-h1">Heading 1</h1>
         <h2>Heading 2</h2>
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>
@@ -114,9 +115,15 @@ const Styleguide = () => {
         <Select
           onChange={handleSelectChange}
           selectedValue={currentOption}
-          placeholder='Select...'
+          placeholder="Select..."
           options={options}
         />
+      </div>
+
+      <br/>
+
+      <div>
+        <Spinner height={50} width={50} />
       </div>
     </>
   )

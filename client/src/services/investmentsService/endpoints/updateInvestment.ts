@@ -6,7 +6,7 @@ const useUpdateInvestment = (investment: Investment) => {
   const queryClient = useQueryClient();
 
   const { mutate: editInvestment, data, isError, isPending, ...args  } = useMutation({
-    mutationKey: ['editInvestment', investment],
+    mutationKey: ['editInvestment'],
     mutationFn: () => mutationData<Investment>({
       url: `investments/${investment.id}`,
       method: 'PUT',

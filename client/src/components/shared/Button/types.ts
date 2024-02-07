@@ -7,4 +7,6 @@ export interface ButtonProps {
   type: ButtonType;
   icon?: JSX.Element;
   onClick?: () => void;
+  disabled?: boolean;
+  showLoadingIcon?: boolean
 }

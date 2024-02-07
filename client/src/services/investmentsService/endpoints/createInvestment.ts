@@ -12,7 +12,7 @@ const useCreateInvestment = (investment: Investment) => {
       method: 'POST',
       data: investment
     }),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['allInvestments'] })
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['investmentsByUser'] })
   });
 
   return {

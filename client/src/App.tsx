@@ -3,7 +3,7 @@ import Root from './Root';
 import Sidebar from './components/Sidebar';
 import { sidebarLinks } from './utils/sidebarLinks';
 import './assets/styles/base/_main.scss';
-import { UserContext, UserProvider } from './utils/contexts/UserContext';
+import { UserProvider } from './utils/contexts/UserContext';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);

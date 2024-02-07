@@ -1,12 +1,10 @@
-@import "../../../assets/styles/base/colors";
-
 .select {
   position: relative;
   z-index: 100;
 
   &__main {
     align-items: center;
-    border: 1px solid $dark-green-200;
+    border: 1px solid var(--dark-green-200);
     border-radius: 6px;
     cursor: pointer;
     display: flex;
@@ -25,9 +23,9 @@
   }
 
   &__options-menu {
-    background-color: $white;
+    background-color: var(--white);
     border-radius: 6px;
-    box-shadow: $box-shadow;
+    box-shadow: var(--box-shadow);
     position: absolute;
     width: 100%;
   }
@@ -53,10 +51,10 @@
     }
 
     &:hover {
-      background-color: $dark-green-200;
+      background-color: var(--dark-green-200);
 
       p {
-        color: $white;
+        color: var(--white);
       }
     }
   }

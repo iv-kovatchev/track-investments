@@ -1,3 +1,3 @@
-import DeleteButton from './DeleteButton';
+import CloseButton from './CloseButton';
 
-export default DeleteButton;
+export default CloseButton;

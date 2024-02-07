@@ -25,7 +25,7 @@
       "id": "4fc3",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024",
       "type": "Crypto"
     },
@@ -33,7 +33,7 @@
       "id": "b7e3",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024",
       "type": "Cash"
     },
@@ -57,7 +57,7 @@
       "id": "93ce",
       "name": "test create",
       "value": 2222.22,
-      "status": "ACTIVE",
+      "status": "Closed",
       "date": "2/5/2024",
       "type": "Cash"
     },
@@ -76,6 +76,176 @@
       "status": "Closed",
       "date": "2/5/2024",
       "type": "Cash"
+    },
+    {
+      "id": "46bfc8d2-c5cd-445f-87fd-53a009c59b75",
+      "name": "Small Cotton Ball",
+      "status": "Active",
+      "value": 0.6185758193023503,
+      "date": "2/7/2024",
+      "type": "Gold"
+    },
+    {
+      "id": "4020f05c-7219-4b22-9da7-d96eb3cec014",
+      "name": "Bespoke Concrete Salad",
+      "status": "Closed",
+      "value": 0.6829417650587857,
+      "date": "2/7/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "6f9c713a-a61b-4eb3-87b9-fbd5bbbcf0d5",
+      "name": "Practical Wooden Chair",
+      "status": "Closed",
+      "value": 427034,
+      "date": "2/7/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "c68ea378-3eb8-4663-969e-12a5ab0d9112",
+      "name": "Unbranded Wooden Hat",
+      "status": "Closed",
+      "value": 2864.71,
+      "date": "2/7/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "f9fd2111-32a7-4be7-bf1e-3f72206b72cd",
+      "name": "Bespoke Granite Computer",
+      "status": "Active",
+      "value": 200893.93,
+      "date": "2/7/2024",
+      "type": "Gold",
+      "userId": "22"
+    },
+    {
+      "id": "1e8fc51f-9b2c-4ab6-b126-2d37865af972",
+      "name": "Recycled Concrete Keyboard",
+      "status": "Closed",
+      "value": 418318.08,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "bc687e47-2c78-4350-ae2a-0cda0727d459",
+      "name": "Licensed Fresh Shirt",
+      "status": "Closed",
+      "value": 277346.84,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "2b0524b6-956b-45b4-8842-4e4f62aaaa36",
+      "name": "Bespoke Concrete Bacon",
+      "status": "Active",
+      "value": 26445.31,
+      "date": "2/7/2024",
+      "type": "Gold",
+      "userId": "22"
+    },
+    {
+      "id": "0e5436f8-0f9f-47f3-b80a-d13d2a5b1bd3",
+      "name": "Modern Cotton Bacon",
+      "status": "Active",
+      "value": 387777.44,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "351e1823-3d88-4dea-a8e3-c9710021083a",
+      "name": "Intelligent Soft Keyboard",
+      "status": "Active",
+      "value": 163702.24,
+      "date": "2/7/2024",
+      "type": "Land",
+      "userId": "22"
+    },
+    {
+      "id": "69ec10b8-4d2b-4b33-8433-df74bf889768",
+      "name": "Oriental Cotton Tuna",
+      "status": "Active",
+      "value": 401633.49,
+      "date": "2/7/2024",
+      "type": "Crypto",
+      "userId": "22"
+    },
+    {
+      "id": "2175af01-4789-4856-b81d-83e009d0443f",
+      "name": "Ergonomic Cotton Mouse",
+      "status": "Active",
+      "value": 386539.84,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "b3c6b705-00df-4ccc-a991-09f665e8b0b5",
+      "name": "Luxurious Plastic Chair",
+      "status": "Active",
+      "value": 281634.52,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "dc719aa8-fc6b-4114-9143-3e7077977a12",
+      "name": "Recycled Rubber Pants",
+      "status": "Active",
+      "value": 275024.55,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "2"
+    },
+    {
+      "id": "ea36f984-785d-4dcf-817a-23361178fb97",
+      "name": "Elegant Metal Cheese",
+      "status": "Closed",
+      "value": 149704.8,
+      "date": "2/7/2024",
+      "type": "Land",
+      "userId": "2"
+    },
+    {
+      "id": "ba504919-0401-41ea-9481-5b7a80c1d50d",
+      "name": "Modern Plastic Soap",
+      "status": "Active",
+      "value": 393767.3,
+      "date": "2/7/2024",
+      "type": "Crypto",
+      "userId": "2"
+    },
+    {
+      "id": "563c545d-db02-4166-a77f-ee2695eef516",
+      "name": "Awesome Steel Chicken",
+      "status": "Active",
+      "value": 112761.43,
+      "date": "2/7/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "b81bacbf-ae42-4d2b-a5e2-db45778fa08e",
+      "name": "Rustic Cotton Keyboard",
+      "status": "Active",
+      "value": 483876.74,
+      "date": "2/7/2024",
+      "type": "Crypto",
+      "userId": "22"
+    },
+    {
+      "id": "0bb605e2-95d4-4eba-a266-dfc03138537a",
+      "name": "Handmade Steel Gloves",
+      "status": "Active",
+      "value": 310671.85,
+      "date": "2/7/2024",
+      "type": "Stocks",
+      "userId": "2"
     }
   ]
 }

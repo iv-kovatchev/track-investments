@@ -1,8 +1,6 @@
-@import "../../../assets/styles/base/colors";
-
 .table-container {
-  background-color: $white;
-  box-shadow: $box-shadow;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
   border-radius: 6px;
   overflow-x: auto;
   max-width: 100%;
@@ -14,7 +12,7 @@
   width: 100%;
 
   &__thead tr {
-    background-color: $dark-green-200;
+    background-color: var(--dark-green-200);
     color: #ffffff;
     text-align: left;
   }
@@ -27,13 +25,13 @@
   }
 
   &__tbody tr:nth-of-type(even) {
-    background-color: $gray-100;
+    background-color: var(--gray-100);
   }
 
   &__tbody tr {
     &:hover {
       td {
-        color: $dark-green-200;
+        color: var(--dark-green-200);
       }
     }
   }

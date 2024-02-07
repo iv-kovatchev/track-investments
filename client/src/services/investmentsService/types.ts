@@ -1,4 +1,4 @@
-type Type =
+export type Type =
   'Cash' |
   'Crypto' |
   'Stocks' |
@@ -6,11 +6,16 @@ type Type =
   'Property' |
   'Land'
 
+type Status =
+  'Active' |
+  'Closed'
+
 export interface Investment {
   id: string,
   name: string,
-  status: string,
+  status: Status,
   date: string,
   value: number,
-  type: Type
+  type: Type,
+  userId?: string
 }

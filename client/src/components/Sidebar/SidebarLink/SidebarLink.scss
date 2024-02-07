@@ -1,14 +1,12 @@
-@import "src/assets/styles/base/colors";
-
 .sidebarLink {
   align-items: center;
-  color: $dark-green-400;
+  color: var(--dark-green-400);
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 
   &:hover {
-    color: $dark-green-200
+    color: var(--dark-green-200)
   }
 
   &__link {
