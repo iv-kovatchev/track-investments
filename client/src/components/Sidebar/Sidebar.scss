@@ -1,3 +1,5 @@
+@import "../../assets/styles/base/breakpoints";
+
 .sidebar {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
@@ -12,6 +14,10 @@
   transform-origin: left;
   width: 60px;
   z-index: 99;
+
+  @include breakpoint-devices('xs-device') {
+    min-height: 100%;
+  }
 
   &--is-open {
     width: 260px;
@@ -31,6 +37,7 @@
     }
 
     .sidebar__collapse-icon {
+      color: var(--dark-green-400);
       left: 246px;
       transform: rotate(0deg);
       transition: left 0.8s ease, tranform 0.8s ease;

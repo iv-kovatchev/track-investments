@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: $font-family;
+  font-family: var(--font-family);
   min-height: 100vh;
 }
 
@@ -29,41 +29,41 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--dark-green-400);
-  font-weight: $fw-bold;
-  letter-spacing: $letter-spacing;
-  line-height: $line-height-small;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-small);
 }
 
 h1 {
-  font-size: $fs-xxlarge;
+  font-size: var(--fs-xxlarge);
 }
 
 h2 {
-  font-size: $fs-xlarge;
+  font-size: var(--fs-xlarge);
 }
 
 h3 {
-  font-size: $fs-medium;
+  font-size: var(--fs-medium);
 }
 
 h4 {
-  font-size: $fs-small;
+  font-size: var(--fs-small);
 }
 
 h5 {
-  font-size: $fs-xsmall;
+  font-size: var(--fs-xsmall);
 }
 
 h6 {
-  font-size: $fs-xxsmall;
+  font-size: var(--fs-xxsmall);
 }
 
 p {
   color: var(--dark-green-400);
-  font-size: $fs-small;
-  font-weight: $fw-normal;
-  letter-spacing: $letter-spacing;
-  line-height: $line-height-small;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-small);
 }
 
 a {
@@ -74,12 +74,12 @@ a {
 button {
   border: none;
   cursor: pointer;
-  font-family: $font-family;
-  font-size: $fs-small;
+  font-family: var(--font-family);
+  font-size: var(--fs-small);
 }
 
 table {
   thead tr th {
-    font-weight: $fw-normal;
+    font-weight: var(--fw-normal);
   }
 }

@@ -1,0 +1,47 @@
+@import "../../../assets/styles/base/breakpoints";
+
+.dashboard-widget {
+  &__total-investments  {
+    font-size: var(--fs-large);
+    margin-bottom: 12px;
+  }
+
+  &__status-container {
+    display: flex;
+  }
+
+  &__status {
+    font-size: var(--fs-large);
+
+    &:last-child {
+      margin-left: 16px;
+    }
+
+    &--active {
+      color: var(--dark-green-100);
+      
+      @include breakpoint-devices('md-device') {
+        color: blue;
+      }
+    }
+
+    &--closed {
+      color: var(--error);
+    }
+  }
+
+
+  &__add-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__skeleton {
+      margin-top: 12px;
+  }
+
+  &__spinner {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -8,8 +8,6 @@ const PieChartComponent = ({
   height,
   radiusProps
 }: PieChartProps) => {
-  console.log(data);
-
   const [activeIndex, setActiveIndex] = useState (0);
 
   const onPieEnter = useCallback ((_: any, index: number) => setActiveIndex (index), [setActiveIndex]);
@@ -25,8 +23,6 @@ const PieChartComponent = ({
       payload,
     } = props;
 
-    console.log (data);
-
     return (
       <g>
         <text fontSize={32} fontFamily='var(--font-family)' x={cx} y={cy} dy={8} textAnchor='middle' fill={payload.color}>
@@ -37,15 +33,15 @@ const PieChartComponent = ({
           cy={cy}
           innerRadius={innerRadius}
           outerRadius={outerRadius}
-          startAngle={startAngle}
-          endAngle={endAngle}
+          startAngle={(endAngle - startAngle) > 2 ? startAngle + 2 : startAngle}
+          endAngle={(endAngle - startAngle) > 2 ? endAngle - 2 : endAngle}
           fill={payload.color}
         />
         <Sector
           cx={cx}
           cy={cy}
-          startAngle={startAngle}
-          endAngle={endAngle}
+          startAngle={(endAngle - startAngle) > 2 ? startAngle + 2 : startAngle}
+          endAngle={(endAngle - startAngle) > 2 ? endAngle - 2 : endAngle}
           innerRadius={outerRadius + 6}
           outerRadius={outerRadius + 10}
           fill={payload.color}
@@ -56,9 +52,8 @@ const PieChartComponent = ({
 
   return (
     <ResponsiveContainer width='100%' height={height}>
-      <PieChart width={400} >
+      <PieChart>
         <Pie
-          style={{ backgroundColor: 'red' }}
           activeIndex={activeIndex}
           activeShape={renderActiveShape}
           data={data}

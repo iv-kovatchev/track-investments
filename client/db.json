@@ -161,7 +161,7 @@
     {
       "id": "0bb605e2-95d4-4eba-a266-dfc03138537a",
       "name": "Handmade Steel Gloves",
-      "status": "Active",
+      "status": "Closed",
       "value": 310671.85,
       "date": "2/7/2024",
       "type": "Stocks",
@@ -188,7 +188,7 @@
     {
       "id": "9b665b59-9b57-427a-a883-c7ead298c92b",
       "name": "Licensed Soft Shoes",
-      "status": "Active",
+      "status": "Closed",
       "value": 385387.45,
       "date": "2/9/2024",
       "type": "Cash",
@@ -202,6 +202,69 @@
       "date": "2/9/2024",
       "type": "Cash",
       "userId": "22"
+    },
+    {
+      "id": "c813fc2a-dd35-43aa-a3d1-43e8be7d6435",
+      "name": "Electronic Bronze Chair",
+      "status": "Active",
+      "value": 246579.96,
+      "date": "2/9/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "062ca688-8b11-4c12-8f8a-36fe225c6b39",
+      "name": "Recycled Cotton Table",
+      "status": "Active",
+      "value": 270488.88,
+      "date": "2/9/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "bfceb4c1-a16e-4c93-bee0-76ab205f2821",
+      "name": "Unbranded Granite Shirt",
+      "status": "Active",
+      "value": 169422.54,
+      "date": "2/9/2024",
+      "type": "Gold",
+      "userId": "22"
+    },
+    {
+      "id": "9e5bada4-6b23-400a-861e-8cde2a1cd642",
+      "name": "Handmade Metal Mouse",
+      "status": "Active",
+      "value": 217148.4,
+      "date": "2/9/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "10a2678e-72e4-4fa1-8250-f85f1aaca6eb",
+      "name": "Bespoke Fresh Shirt",
+      "status": "Active",
+      "value": 307272.27,
+      "date": "2/9/2024",
+      "type": "Crypto",
+      "userId": "22"
+    },
+    {
+      "id": "9216e9f1-4eec-4c5e-890b-6c954acb7679",
+      "name": "Electronic Bronze Shirt",
+      "status": "Active",
+      "value": 57355.72,
+      "date": "2/10/2024",
+      "type": "Gold",
+      "userId": "2"
+    },
+    {
+      "id": "61d45eec-4d22-4076-823c-2d76f03ab0e1",
+      "name": "Ergonomic Cotton Soap",
+      "status": "Active",
+      "value": 251520.94,
+      "date": "2/10/2024",
+      "type": "Land",
+      "userId": "2"
     }
   ]
 }

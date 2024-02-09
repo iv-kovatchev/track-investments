@@ -156,7 +156,7 @@ const Styleguide = () => {
             value: 11200
           },
           {
-            name: 'Cash',
+            name: 'Casha',
             color: '#2D6A4F',
             value: 55
           },
@@ -165,9 +165,9 @@ const Styleguide = () => {
             color: '#52B788',
             value: 5435
           },{
-            name: 'Land',
+            name: 'Landa',
             color: '#95D5B2',
-            value: 321
+            value: 66
           },
           {
             name: 'Cash',

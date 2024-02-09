@@ -1,0 +1,40 @@
+$breakpoints: (
+  'xs': 'max-width: 576px',
+  'sm': '(min-width: 567px) and (max-width: 767px)',
+  'md': '(min-width: 768px) and (max-width: 991px)',
+  'lg': '(min-width: 992px) and (max-width: 1199px)',
+  'xl': '(min-width: 1200px) and (max-width: 1399px)',
+  'xxl': 'min-width: 1400px'
+);
+
+$breakpoints-max: (
+  'xs-device': 'max-width: 576px',
+  'md-device': 'max-width: 768px',
+  'lg-device': 'max-width: 992px',
+  'xl-device': 'max-width: 1200px',
+  'xxl-device': 'max-width: 1400px'
+);
+
+// mixin that takes as input breakpoint names such as xs, sm etc.
+@mixin breakpoint($user-value) {
+  $my-map: map-get($breakpoints, $user-value);
+  @if $my-map {
+    @media (#{$my-map}) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint #{$user-value} is not defined";
+  }
+}
+
+@mixin breakpoint-devices($user-value) {
+  $my-map: map-get($breakpoints-max, $user-value);
+  @if $my-map {
+    @media (#{$my-map}) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint #{$user-value} is not defined";
+  }
+}
+
