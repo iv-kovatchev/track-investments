@@ -10,4 +10,21 @@
     color: var(--error);
     margin-top: 6px;
   }
+
+  &__content {
+    display: flex;
+  }
+
+  &__table-container {
+    flex: 2;
+    margin-right: 24px;
+  }
+
+  &__widgets-container {
+    flex: 1;
+  }
+
+  &__portfolio-widget {
+    margin-top: 24px;
+  }
 }

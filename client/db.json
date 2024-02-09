@@ -15,86 +15,6 @@
   ],
   "investments": [
     {
-      "id": "6ff7",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024"
-    },
-    {
-      "id": "4fc3",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024",
-      "type": "Crypto"
-    },
-    {
-      "id": "b7e3",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "c9d8",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "3b99",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "ACTIVE",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "93ce",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "51af",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "f7e7",
-      "name": "test create",
-      "value": 2222.22,
-      "status": "Closed",
-      "date": "2/5/2024",
-      "type": "Cash"
-    },
-    {
-      "id": "46bfc8d2-c5cd-445f-87fd-53a009c59b75",
-      "name": "Small Cotton Ball",
-      "status": "Active",
-      "value": 0.6185758193023503,
-      "date": "2/7/2024",
-      "type": "Gold"
-    },
-    {
-      "id": "4020f05c-7219-4b22-9da7-d96eb3cec014",
-      "name": "Bespoke Concrete Salad",
-      "status": "Closed",
-      "value": 0.6829417650587857,
-      "date": "2/7/2024",
-      "type": "Stocks",
-      "userId": "22"
-    },
-    {
       "id": "6f9c713a-a61b-4eb3-87b9-fbd5bbbcf0d5",
       "name": "Practical Wooden Chair",
       "status": "Closed",
@@ -160,7 +80,7 @@
     {
       "id": "351e1823-3d88-4dea-a8e3-c9710021083a",
       "name": "Intelligent Soft Keyboard",
-      "status": "Active",
+      "status": "Closed",
       "value": 163702.24,
       "date": "2/7/2024",
       "type": "Land",
@@ -169,7 +89,7 @@
     {
       "id": "69ec10b8-4d2b-4b33-8433-df74bf889768",
       "name": "Oriental Cotton Tuna",
-      "status": "Active",
+      "status": "Closed",
       "value": 401633.49,
       "date": "2/7/2024",
       "type": "Crypto",
@@ -178,7 +98,7 @@
     {
       "id": "2175af01-4789-4856-b81d-83e009d0443f",
       "name": "Ergonomic Cotton Mouse",
-      "status": "Active",
+      "status": "Closed",
       "value": 386539.84,
       "date": "2/7/2024",
       "type": "Cash",
@@ -246,6 +166,42 @@
       "date": "2/7/2024",
       "type": "Stocks",
       "userId": "2"
+    },
+    {
+      "id": "278a08df-79fa-4b98-8e42-24c863722d74",
+      "name": "Handcrafted Cotton Cheese",
+      "status": "Active",
+      "value": 438998.36,
+      "date": "2/7/2024",
+      "type": "Crypto",
+      "userId": "2"
+    },
+    {
+      "id": "d9841cd3-ae65-4796-ac56-7040282ac9b0",
+      "name": "Fantastic Rubber Bacon",
+      "status": "Active",
+      "value": 61056.58,
+      "date": "2/9/2024",
+      "type": "Gold",
+      "userId": "22"
+    },
+    {
+      "id": "9b665b59-9b57-427a-a883-c7ead298c92b",
+      "name": "Licensed Soft Shoes",
+      "status": "Active",
+      "value": 385387.45,
+      "date": "2/9/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "83304d04-5ab1-438f-a90c-46128a6369cf",
+      "name": "Generic Metal Hat",
+      "status": "Active",
+      "value": 258926.89,
+      "date": "2/9/2024",
+      "type": "Cash",
+      "userId": "22"
     }
   ]
 }

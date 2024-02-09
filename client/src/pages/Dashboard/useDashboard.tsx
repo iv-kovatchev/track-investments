@@ -1,12 +1,13 @@
 import { createInvestment, getInvestmentsByUserId } from '../../services/investmentsService';
 import { UseInvestmentsProps } from './types';
 import CloseButton from './DeleteButton';
-import useDeleteInvestment from '../../services/investmentsService/endpoints/deleteInvestment';
 import { useState } from 'react';
 import { faker } from '@faker-js/faker';
 import { getRandomType } from '../../utils/randomType';
+import { Investment } from '../../services/investmentsService/types';
+import { sumInvestmentsFromType } from './config';
 
-const useInvestments = ({ currentUser }: UseInvestmentsProps) => {
+const useDashboard = ({ currentUser }: UseInvestmentsProps) => {
   const [addInvestmentError, setAddInvestmentError] = useState(false);
 
   const {
@@ -54,7 +55,38 @@ const useInvestments = ({ currentUser }: UseInvestmentsProps) => {
       status: investment.status,
       date: investment.date,
       deleteButton: <CloseButton investment={investment} />
-    }))
+    }));
+
+    const pieChartData = [
+    {
+      name: 'Crypto',
+      color: '#B7E4C7',
+      value: sumInvestmentsFromType( 'Crypto', data)
+    },
+    {
+      name: 'Stocks',
+      color: '#40916C',
+      value: sumInvestmentsFromType( 'Stocks', data)
+    },
+    {
+      name: 'Land',
+      color: '#95D5B2',
+      value: sumInvestmentsFromType( 'Land', data)
+    },
+    {
+      name: 'Cash',
+      color: '#2D6A4F',
+      value: sumInvestmentsFromType( 'Cash', data)
+    },
+    {
+      name: 'Gold',
+      color: '#52B788',
+      value: sumInvestmentsFromType( 'Gold', data)
+    },{
+      name: 'Property',
+      color: '#95D5B2',
+      value: sumInvestmentsFromType( 'Property', data)
+    }];
 
   return {
     isLoadingAllInvestments,
@@ -62,8 +94,9 @@ const useInvestments = ({ currentUser }: UseInvestmentsProps) => {
     data,
     tableData,
     handleAddInvestment,
-    addInvestmentError
+    addInvestmentError,
+    pieChartData
   }
 }
 
-export default useInvestments;
+export default useDashboard;

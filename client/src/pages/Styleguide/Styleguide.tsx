@@ -6,6 +6,8 @@ import Table from '../../components/shared/Table';
 import Select from '../../components/shared/Select';
 import { SelectOption } from '../../components/shared/Select/types';
 import Spinner from '../../components/shared/Spinner';
+import Widget from '../../components/shared/Widget';
+import PieChart from '../../components/shared/Charts/PieChart';
 
 const tableData = [
   {
@@ -123,7 +125,66 @@ const Styleguide = () => {
       <br/>
 
       <div>
-        <Spinner height={50} width={50} />
+        <Spinner height={50} width={50}/>
+      </div>
+
+      <br/>
+
+      <div>
+        <Widget title="Test widget">
+          <div>Lets test</div>
+        </Widget>
+      </div>
+
+      <br/>
+      <h2>Pie chart</h2>
+      <div>
+        <PieChart height={400} data={[
+          {
+            name: 'Crypto',
+            color: '#B7E4C7',
+            value: 11200
+          },
+          {
+            name: 'Stocks',
+            color: '#40916C',
+            value: 11200
+          },
+          {
+            name: 'Land',
+            color: '#95D5B2',
+            value: 11200
+          },
+          {
+            name: 'Cash',
+            color: '#2D6A4F',
+            value: 55
+          },
+          {
+            name: 'Gold',
+            color: '#52B788',
+            value: 5435
+          },{
+            name: 'Land',
+            color: '#95D5B2',
+            value: 321
+          },
+          {
+            name: 'Cash',
+            color: '#2D6A4F',
+            value: 2222
+          },
+          {
+            name: 'Gold',
+            color: '#52B788',
+            value: 11200
+          }
+        ]}
+        radiusProps={{
+        innerRadius: 120,
+        outerRadius: 170
+        }}
+        />
       </div>
     </>
   )

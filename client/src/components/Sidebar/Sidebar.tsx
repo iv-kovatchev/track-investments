@@ -5,8 +5,6 @@ import SidebarLink from './SidebarLink';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 import useSidebar from './useSidebar';
 import UsersDropdown from './UsersDropdown';
-import { useContext } from 'react';
-import { UserContext } from '../../utils/contexts/UserContext';
 
 const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
   const { handleCollapse } = useSidebar({ isOpen, collapseSidebar })
@@ -15,7 +13,7 @@ const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
     <div className={`sidebar ${isOpen ? 'sidebar--is-open' : ''}`}>
       <div className='sidebar__header'>
           <img src={logo} alt='logo' className='sidebar__logo' />
-          <h2 className='sidebar__title'>Investments Track</h2>
+          <h2 className='sidebar__title'>Track Investments</h2>
       </div>
 
       <UsersDropdown />

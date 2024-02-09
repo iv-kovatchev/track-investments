@@ -1,22 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 import Settings from './pages/Settings';
-import Investments from './pages/Investments';
+import Dashboard from './pages/Dashboard';
 import Styleguide from './pages/Styleguide';
 import Grid from './components/shared/Grid';
 
 const Root = () => {
-  console.log('render root');
-
   return (
       <Routes>
-          {['/', '/investments'].map((path) =>
+          {['/', '/dashboard'].map((path) =>
             <Route
               key={path}
               path={path}
               element={
                 <Grid
-                  title='Investments'
-                  child={<Investments/>}
+                  title='Dashboard'
+                  child={<Dashboard/>}
                 />}
             />
           )}

@@ -3,8 +3,8 @@ import { FaHandHoldingDollar, FaGear } from 'react-icons/fa6';
 
 export const sidebarLinks: Link[] = [
   {
-    name: 'Investments',
-    path: '/investments',
+    name: 'Dashboard',
+    path: '/dashboard',
     icon: <FaHandHoldingDollar />
   },
   {
