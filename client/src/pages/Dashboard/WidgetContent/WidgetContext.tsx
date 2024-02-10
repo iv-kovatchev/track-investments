@@ -63,7 +63,7 @@ const WidgetContext = ({ investments, isLoading }: WidgetContextPros) => {
           showLoadingIcon={isPendingCreateInvestment || isLoading}
           onClick={handleAddInvestment}/>
         {addInvestmentError &&
-          <p className="investments__add-button-error">First you need to choose a user from the sidebar</p>}
+          <p className="dashboard__add-button-error">First you need to choose a user from the sidebar</p>}
       </div>
     </section>
   )

@@ -51,7 +51,7 @@ const PieChartComponent = ({
   };
 
   return (
-    <ResponsiveContainer width='100%' height={height}>
+    <ResponsiveContainer width='100%' height={height} >
       <PieChart>
         <Pie
           activeIndex={activeIndex}

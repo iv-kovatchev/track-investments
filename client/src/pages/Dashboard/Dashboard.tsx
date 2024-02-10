@@ -8,7 +8,7 @@ import Widget from '../../components/shared/Widget';
 import WidgetContext from './WidgetContent';
 
 const Dashboard = (): JSX.Element => {
-  const {currentUser} = useContext (UserContext);
+  const { currentUser} = useContext(UserContext);
 
   const {
     data,
@@ -19,7 +19,7 @@ const Dashboard = (): JSX.Element => {
   return (
     <div className="investments">
       <Widget
-        externalClass="investments__widget"
+        externalClass="dashboard__widget"
         children={<WidgetContext isLoading={isLoadingAllInvestments} investments={data}/>}
       />
 

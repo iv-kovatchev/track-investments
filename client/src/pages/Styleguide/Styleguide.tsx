@@ -8,6 +8,8 @@ import { SelectOption } from '../../components/shared/Select/types';
 import Spinner from '../../components/shared/Spinner';
 import Widget from '../../components/shared/Widget';
 import PieChart from '../../components/shared/Charts/PieChart';
+import TestForm from '../../components/shared/TestForm';
+import Modal from '../../components/shared/Modal';
 
 const tableData = [
   {
@@ -54,15 +56,19 @@ const options = [
     label: 'Rayna',
     value: 'rayna'
   }
-]
+];
 
 const Styleguide = () => {
   const [ testState, setTestState ] = useState(true);
   const [ currentOption, setCurrentOption ] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   console.log(currentOption);
 
-  const handleSelectChange = (option: SelectOption) => setCurrentOption(option.label)
+  const handleSelectChange = (option: SelectOption) => setCurrentOption(option.label);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   const handleClick = () => setTestState(!testState);
   return (
@@ -164,7 +170,7 @@ const Styleguide = () => {
             name: 'Gold',
             color: '#52B788',
             value: 5435
-          },{
+          }, {
             name: 'Landa',
             color: '#95D5B2',
             value: 66
@@ -180,11 +186,30 @@ const Styleguide = () => {
             value: 11200
           }
         ]}
-        radiusProps={{
-        innerRadius: 120,
-        outerRadius: 170
-        }}
+                  radiusProps={{
+                    innerRadius: 120,
+                    outerRadius: 170
+                  }}
         />
+      </div>
+
+      <br/>
+
+      <div>
+        <TestForm/>
+      </div>
+
+      <br/>
+
+      <div>
+        <Button name='Open modal' type='primary' onClick={handleOpenModal} />
+        {isModalOpen &&
+          <Modal
+            onClose={handleCloseModal}
+            title='Test modal!'
+            children={<p>This is my modal</p>}
+          />
+        }
       </div>
     </>
   )
