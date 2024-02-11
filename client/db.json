@@ -15,46 +15,10 @@
   ],
   "investments": [
     {
-      "id": "6f9c713a-a61b-4eb3-87b9-fbd5bbbcf0d5",
-      "name": "Practical Wooden Chair",
-      "status": "Closed",
-      "value": 427034,
-      "date": "2/7/2024",
-      "type": "Stocks",
-      "userId": "22"
-    },
-    {
-      "id": "c68ea378-3eb8-4663-969e-12a5ab0d9112",
-      "name": "Unbranded Wooden Hat",
-      "status": "Closed",
-      "value": 2864.71,
-      "date": "2/7/2024",
-      "type": "Stocks",
-      "userId": "22"
-    },
-    {
-      "id": "f9fd2111-32a7-4be7-bf1e-3f72206b72cd",
-      "name": "Bespoke Granite Computer",
-      "status": "Active",
-      "value": 200893.93,
-      "date": "2/7/2024",
-      "type": "Gold",
-      "userId": "22"
-    },
-    {
       "id": "1e8fc51f-9b2c-4ab6-b126-2d37865af972",
       "name": "Recycled Concrete Keyboard",
       "status": "Closed",
       "value": 418318.08,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "bc687e47-2c78-4350-ae2a-0cda0727d459",
-      "name": "Licensed Fresh Shirt",
-      "status": "Closed",
-      "value": 277346.84,
       "date": "2/7/2024",
       "type": "Cash",
       "userId": "22"
@@ -114,15 +78,6 @@
       "userId": "22"
     },
     {
-      "id": "dc719aa8-fc6b-4114-9143-3e7077977a12",
-      "name": "Recycled Rubber Pants",
-      "status": "Active",
-      "value": 275024.55,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "2"
-    },
-    {
       "id": "ea36f984-785d-4dcf-817a-23361178fb97",
       "name": "Elegant Metal Cheese",
       "status": "Closed",
@@ -179,7 +134,7 @@
     {
       "id": "d9841cd3-ae65-4796-ac56-7040282ac9b0",
       "name": "Fantastic Rubber Bacon",
-      "status": "Active",
+      "status": "Closed",
       "value": 61056.58,
       "date": "2/9/2024",
       "type": "Gold",
@@ -195,39 +150,12 @@
       "userId": "22"
     },
     {
-      "id": "83304d04-5ab1-438f-a90c-46128a6369cf",
-      "name": "Generic Metal Hat",
-      "status": "Active",
-      "value": 258926.89,
-      "date": "2/9/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
       "id": "c813fc2a-dd35-43aa-a3d1-43e8be7d6435",
       "name": "Electronic Bronze Chair",
       "status": "Active",
       "value": 246579.96,
       "date": "2/9/2024",
       "type": "Stocks",
-      "userId": "22"
-    },
-    {
-      "id": "062ca688-8b11-4c12-8f8a-36fe225c6b39",
-      "name": "Recycled Cotton Table",
-      "status": "Active",
-      "value": 270488.88,
-      "date": "2/9/2024",
-      "type": "Stocks",
-      "userId": "22"
-    },
-    {
-      "id": "bfceb4c1-a16e-4c93-bee0-76ab205f2821",
-      "name": "Unbranded Granite Shirt",
-      "status": "Active",
-      "value": 169422.54,
-      "date": "2/9/2024",
-      "type": "Gold",
       "userId": "22"
     },
     {

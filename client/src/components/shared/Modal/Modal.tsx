@@ -16,7 +16,7 @@ const Modal = ({ title, children, onClose }: ModalProps) => {
     <dialog open className='modal'>
       <div className='modal__container'>
         <div className='modal__content'>
-          <h1 className='modal__title'>{title}</h1>
+          <h2 className='modal__title'>{title}</h2>
           <div className='modal__body'>
             {children}
           </div>

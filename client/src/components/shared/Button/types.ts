@@ -1,8 +1,10 @@
 type ButtonType =
   'primary' |
-  'secondary'
+  'secondary' |
+  'error'
 
 export interface ButtonProps {
+  externalClassname?: string;
   name: string;
   type: ButtonType;
   icon?: JSX.Element;

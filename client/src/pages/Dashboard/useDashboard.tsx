@@ -1,23 +1,31 @@
 import { getInvestmentsByUserId } from '../../services/investmentsService';
-import { UseInvestmentsProps } from './types';
-import CloseButton from './DeleteButton';
-import { Investment } from '../../services/investmentsService/types';
+import { StateDeleteModalProps, UseInvestmentsProps } from './types';
+import CloseButton from './CloseButton';
 import { MdDeleteSweep } from 'react-icons/md';
+import { useState } from 'react';
 
-const useDashboard = ({ currentUser }: UseInvestmentsProps) => {
+const useDashboard = ({currentUser}: UseInvestmentsProps) => {
+  const [deleteModalProps, setDeleteModalProps] = useState<StateDeleteModalProps> ({
+    investmentId: '',
+    isOpen: false
+  });
+
   const {
     data,
-    isLoading:isLoadingAllInvestments,
+    isLoading: isLoadingAllInvestments,
     isError
-  } = getInvestmentsByUserId(currentUser ? currentUser.userId : '');
+  } = getInvestmentsByUserId (currentUser ? currentUser.userId : '');
 
-  if(isError) {
-    alert('There is network error')
+  if (isError) {
+    alert ('There is network error');
   }
 
-  const investmentName = (investmentId: string) => {
+  const deleteInvestment = (investmentId: string) => {
     const handleDeleteInvestment = () => {
-      console.log(investmentId);
+      setDeleteModalProps ({
+        investmentId,
+        isOpen: true
+      });
     }
 
     return (
@@ -27,21 +35,42 @@ const useDashboard = ({ currentUser }: UseInvestmentsProps) => {
     )
   }
 
+  let investmentsColumns = [
+    'Name',
+    'Type',
+    'Value',
+    'Status',
+    'Date',
+    ''];
+
+  if(currentUser) {
+    investmentsColumns = [...investmentsColumns, ''];
+  }
+
   const tableData = data?.map (
-    (investment) => ({
-      name: investment.name,
-      type: investment.type,
-      value: investment.value,
-      status: investment.status,
-      date: investment.date,
-      closeButton: <CloseButton investment={investment} />,
-      deleteButton: investmentName(investment.id),
-    }));
+    (investment) => {
+      const investmentData = {
+        name: investment.name,
+        type: investment.type,
+        value: investment.value,
+        status: investment.status,
+        date: investment.date,
+        closeButton: <CloseButton investment={investment}/>,
+      }
+
+      if (currentUser)
+        return { ...investmentData, deleteButton: deleteInvestment(investment.id) };
+
+      return investmentData;
+    });
 
   return {
     isLoadingAllInvestments,
     data,
-    tableData
+    investmentsColumns,
+    tableData,
+    deleteModalProps,
+    setDeleteModalProps
   }
 }
 

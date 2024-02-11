@@ -1,0 +1,15 @@
+.delete-investment-modal {
+  &__description {
+    font-size: var(--fs-medium);
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: end;
+    margin-top: 12px;
+  }
+
+  &__confirm-button {
+    margin-right: 6px;
+  }
+}
