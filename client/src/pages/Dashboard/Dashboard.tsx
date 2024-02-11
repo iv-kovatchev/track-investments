@@ -28,7 +28,7 @@ const Dashboard = (): JSX.Element => {
 
       <Widget
         externalClass="dashboard__widget"
-        children={<WidgetContext isLoading={isLoadingAllInvestments} investments={data}/>}
+        children={<WidgetContext isLoading={isLoadingAllInvestments} investments={data} />}
       />
 
       <Table

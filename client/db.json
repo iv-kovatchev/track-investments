@@ -11,126 +11,15 @@
       "first_name": "Peter",
       "last_name": "Ivanov",
       "age": 31
+    },
+    {
+      "id": "3",
+      "first_name": "Miroslav",
+      "last_name": "Grudov",
+      "age": 31
     }
   ],
   "investments": [
-    {
-      "id": "1e8fc51f-9b2c-4ab6-b126-2d37865af972",
-      "name": "Recycled Concrete Keyboard",
-      "status": "Closed",
-      "value": 418318.08,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "2b0524b6-956b-45b4-8842-4e4f62aaaa36",
-      "name": "Bespoke Concrete Bacon",
-      "status": "Active",
-      "value": 26445.31,
-      "date": "2/7/2024",
-      "type": "Gold",
-      "userId": "22"
-    },
-    {
-      "id": "0e5436f8-0f9f-47f3-b80a-d13d2a5b1bd3",
-      "name": "Modern Cotton Bacon",
-      "status": "Active",
-      "value": 387777.44,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "351e1823-3d88-4dea-a8e3-c9710021083a",
-      "name": "Intelligent Soft Keyboard",
-      "status": "Closed",
-      "value": 163702.24,
-      "date": "2/7/2024",
-      "type": "Land",
-      "userId": "22"
-    },
-    {
-      "id": "69ec10b8-4d2b-4b33-8433-df74bf889768",
-      "name": "Oriental Cotton Tuna",
-      "status": "Closed",
-      "value": 401633.49,
-      "date": "2/7/2024",
-      "type": "Crypto",
-      "userId": "22"
-    },
-    {
-      "id": "2175af01-4789-4856-b81d-83e009d0443f",
-      "name": "Ergonomic Cotton Mouse",
-      "status": "Closed",
-      "value": 386539.84,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "b3c6b705-00df-4ccc-a991-09f665e8b0b5",
-      "name": "Luxurious Plastic Chair",
-      "status": "Active",
-      "value": 281634.52,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "ea36f984-785d-4dcf-817a-23361178fb97",
-      "name": "Elegant Metal Cheese",
-      "status": "Closed",
-      "value": 149704.8,
-      "date": "2/7/2024",
-      "type": "Land",
-      "userId": "2"
-    },
-    {
-      "id": "ba504919-0401-41ea-9481-5b7a80c1d50d",
-      "name": "Modern Plastic Soap",
-      "status": "Active",
-      "value": 393767.3,
-      "date": "2/7/2024",
-      "type": "Crypto",
-      "userId": "2"
-    },
-    {
-      "id": "563c545d-db02-4166-a77f-ee2695eef516",
-      "name": "Awesome Steel Chicken",
-      "status": "Active",
-      "value": 112761.43,
-      "date": "2/7/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "b81bacbf-ae42-4d2b-a5e2-db45778fa08e",
-      "name": "Rustic Cotton Keyboard",
-      "status": "Active",
-      "value": 483876.74,
-      "date": "2/7/2024",
-      "type": "Crypto",
-      "userId": "22"
-    },
-    {
-      "id": "0bb605e2-95d4-4eba-a266-dfc03138537a",
-      "name": "Handmade Steel Gloves",
-      "status": "Closed",
-      "value": 310671.85,
-      "date": "2/7/2024",
-      "type": "Stocks",
-      "userId": "2"
-    },
-    {
-      "id": "278a08df-79fa-4b98-8e42-24c863722d74",
-      "name": "Handcrafted Cotton Cheese",
-      "status": "Active",
-      "value": 438998.36,
-      "date": "2/7/2024",
-      "type": "Crypto",
-      "userId": "2"
-    },
     {
       "id": "d9841cd3-ae65-4796-ac56-7040282ac9b0",
       "name": "Fantastic Rubber Bacon",
@@ -138,24 +27,6 @@
       "value": 61056.58,
       "date": "2/9/2024",
       "type": "Gold",
-      "userId": "22"
-    },
-    {
-      "id": "9b665b59-9b57-427a-a883-c7ead298c92b",
-      "name": "Licensed Soft Shoes",
-      "status": "Closed",
-      "value": 385387.45,
-      "date": "2/9/2024",
-      "type": "Cash",
-      "userId": "22"
-    },
-    {
-      "id": "c813fc2a-dd35-43aa-a3d1-43e8be7d6435",
-      "name": "Electronic Bronze Chair",
-      "status": "Active",
-      "value": 246579.96,
-      "date": "2/9/2024",
-      "type": "Stocks",
       "userId": "22"
     },
     {
@@ -177,22 +48,202 @@
       "userId": "22"
     },
     {
-      "id": "9216e9f1-4eec-4c5e-890b-6c954acb7679",
-      "name": "Electronic Bronze Shirt",
+      "id": "401303fa-4f2b-49c0-a89c-27fc8cf3d71d",
+      "name": "Recycled Cotton Car",
       "status": "Active",
-      "value": 57355.72,
-      "date": "2/10/2024",
-      "type": "Gold",
+      "value": 326379.38,
+      "date": "2/11/2024",
+      "type": "Stocks",
+      "userId": "11"
+    },
+    {
+      "id": "40c539ae-c8da-4694-9ce0-061cf4505436",
+      "name": "Handmade Wooden Table",
+      "status": "Active",
+      "value": 177094.96,
+      "date": "2/11/2024",
+      "type": "Stocks",
+      "userId": "11"
+    },
+    {
+      "id": "13c6c72f-613e-4ee6-b228-f7b905dca5e3",
+      "name": "Small Rubber Keyboard",
+      "status": "Active",
+      "value": 460684.25,
+      "date": "2/11/2024",
+      "type": "Crypto",
+      "userId": "11"
+    },
+    {
+      "id": "b64d8e98-8c46-4eb7-a41a-8379c568f745",
+      "name": "Electronic Cotton Table",
+      "status": "Active",
+      "value": 350812.81,
+      "date": "2/11/2024",
+      "type": "Land",
+      "userId": "11"
+    },
+    {
+      "id": "24c7ad0b-0602-4940-9a90-17d8be99f542",
+      "name": "Recycled Granite Ball",
+      "status": "Closed",
+      "value": 467924.02,
+      "date": "2/11/2024",
+      "type": "Crypto",
+      "userId": "22"
+    },
+    {
+      "id": "9a6f33a2-0362-49fb-916d-7d191c47fa57",
+      "name": "Licensed Soft Chicken",
+      "status": "Active",
+      "value": 298413.51,
+      "date": "2/11/2024",
+      "type": "Crypto",
+      "userId": "22"
+    },
+    {
+      "id": "7febcd99-2f24-4a8c-9691-0c6af7a46ee6",
+      "name": "Sleek Rubber Hat",
+      "status": "Active",
+      "value": 59537.1,
+      "date": "2/11/2024",
+      "type": "Land",
       "userId": "2"
     },
     {
-      "id": "61d45eec-4d22-4076-823c-2d76f03ab0e1",
-      "name": "Ergonomic Cotton Soap",
+      "id": "bb77ba22-b886-4c12-95ce-8c0ea68a61af",
+      "name": "Small Rubber Computer",
       "status": "Active",
-      "value": 251520.94,
-      "date": "2/10/2024",
-      "type": "Land",
+      "value": 428586.26,
+      "date": "2/11/2024",
+      "type": "Property",
       "userId": "2"
+    },
+    {
+      "id": "27f4c449-e12f-4140-9917-f4db70bd470d",
+      "name": "Unbranded Fresh Computer",
+      "status": "Closed",
+      "value": 246162.35,
+      "date": "2/11/2024",
+      "type": "Stocks",
+      "userId": "3"
+    },
+    {
+      "id": "d92fd777-225c-481d-b826-8135e4a526fb",
+      "name": "Rustic Metal Soap",
+      "status": "Active",
+      "value": 200697.01,
+      "date": "2/11/2024",
+      "type": "Gold",
+      "userId": "3"
+    },
+    {
+      "id": "a0292a9b-16d1-4255-bb7a-e933d97f3ac9",
+      "name": "Intelligent Frozen Computer",
+      "status": "Active",
+      "value": 261273.99,
+      "date": "2/11/2024",
+      "type": "Property",
+      "userId": "22"
+    },
+    {
+      "id": "d83c7e3b-ad56-42bb-9a85-a795479a9092",
+      "name": "Unbranded Plastic Ball",
+      "status": "Active",
+      "value": 206903.67,
+      "date": "2/11/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "dcc3d800-d9f9-42d1-a455-6dee1e3c1d0f",
+      "name": "Generic Rubber Cheese",
+      "status": "Active",
+      "value": 478081.32,
+      "date": "2/11/2024",
+      "type": "Property",
+      "userId": "22"
+    },
+    {
+      "id": "7fc57b94-63b9-46a1-8c3d-5d523bd93d99",
+      "name": "Gorgeous Bronze Keyboard",
+      "status": "Active",
+      "value": 458715.82,
+      "date": "2/11/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "fcdea09c-cadc-4ff4-8e28-bfc9b1a87ef9",
+      "name": "Handcrafted Steel Fish",
+      "status": "Active",
+      "value": 379420.04,
+      "date": "2/11/2024",
+      "type": "Stocks",
+      "userId": "22"
+    },
+    {
+      "id": "493e92d7-be95-4ed0-9f39-cbc251aeb673",
+      "name": "Handmade Cotton Pizza",
+      "status": "Active",
+      "value": 20105.44,
+      "date": "2/11/2024",
+      "type": "Land",
+      "userId": "22"
+    },
+    {
+      "id": "cf55a86e-271b-4eca-8c61-35c3174af8b6",
+      "name": "Tasty Metal Car",
+      "status": "Active",
+      "value": 28677.99,
+      "date": "2/11/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "dec4b228-7405-4d57-952c-cded68c4b957",
+      "name": "Elegant Steel Table",
+      "status": "Active",
+      "value": 324650.03,
+      "date": "2/11/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "6dfa20f2-3570-44a6-be61-fc75fe27df71",
+      "name": "Rustic Frozen Keyboard",
+      "status": "Active",
+      "value": 31612.9,
+      "date": "2/11/2024",
+      "type": "Property",
+      "userId": "22"
+    },
+    {
+      "id": "eaae1a1a-89ea-43a0-8e5a-7b640b65689f",
+      "name": "Gorgeous Soft Pants",
+      "status": "Active",
+      "value": 342274.52,
+      "date": "2/11/2024",
+      "type": "Cash",
+      "userId": "22"
+    },
+    {
+      "id": "936ca547-ce92-4f41-9004-8152fb61c448",
+      "name": "Electronic Granite Pizza",
+      "status": "Active",
+      "value": 411519.3,
+      "date": "2/11/2024",
+      "type": "Property",
+      "userId": "22"
+    },
+    {
+      "id": "2b9d11f2-0017-4f85-9a59-f00a3df7ab57",
+      "name": "Intelligent Bronze Chicken",
+      "status": "Active",
+      "value": 255107.51,
+      "date": "2/11/2024",
+      "type": "Stocks",
+      "userId": "22"
     }
   ]
 }

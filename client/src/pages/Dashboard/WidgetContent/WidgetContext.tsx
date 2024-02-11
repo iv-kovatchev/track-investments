@@ -8,8 +8,8 @@ import './WidgetContext.scss';
 import Spinner from '../../../components/shared/Spinner';
 import Skeleton from 'react-loading-skeleton';
 
-const WidgetContext = ({ investments, isLoading }: WidgetContextPros) => {
-  const { currentUser} = useContext (UserContext);
+const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
+  const {currentUser} = useContext (UserContext);
 
   const {
     pieChartData,
@@ -20,12 +20,14 @@ const WidgetContext = ({ investments, isLoading }: WidgetContextPros) => {
     closedInvestments
   } = useWidgetContext ({currentUser, investments});
 
+  console.log (investments?.length);
+
   return (
     <section className="dashboard-widget">
       {isLoading ?
-        <div className='dashboard-widget__skeleton'>
-          <Skeleton height={30} />
-          <Skeleton height={30} className='dashboard-widget__skeleton' />
+        <div className="dashboard-widget__skeleton">
+          <Skeleton height={30}/>
+          <Skeleton height={30} className="dashboard-widget__skeleton"/>
         </div> :
         <>
           <p className="dashboard-widget__total-investments">
@@ -42,17 +44,23 @@ const WidgetContext = ({ investments, isLoading }: WidgetContextPros) => {
         </>
       }
 
-      {isLoading ? <div className='dashboard-widget__spinner'>
-        <Spinner height={400} width={150} color='#2D6A4F' />
-      </div> :
-        <PieChart
-          height={400}
-          data={pieChartData}
-          radiusProps={{
-            innerRadius: 90,
-            outerRadius: 150
-          }}
-        />
+      {isLoading ? <div className="dashboard-widget__spinner">
+          <Spinner height={400} width={150} color="#2D6A4F"/>
+        </div> :
+        (investments?.length === 0 ?
+            <div className="dashboard-widget__no-data">
+              <h2>No data</h2>
+            </div> :
+            (
+              <PieChart
+                height={400}
+                data={pieChartData}
+                radiusProps={{
+                  innerRadius: 90,
+                  outerRadius: 150
+                }}
+              />)
+        )
       }
 
       <div className="dashboard-widget__add-button">

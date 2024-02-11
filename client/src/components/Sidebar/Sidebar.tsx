@@ -24,7 +24,7 @@ const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
             <SidebarLink
               link={link}
               isSidebarOpen={isOpen}
-              key={index}
+              key={link.name}
             />
           )}
         </ul>

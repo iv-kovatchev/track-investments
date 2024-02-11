@@ -6,7 +6,7 @@ import useDeleteInvestmentModal from './useDeleteInvestmentModal';
 import './DeleteInvestmentModal.scss';
 
 const DeleteInvestmentModal = ({ modalProps, setModalProps  }: DeleteInvestmentModalProps) => {
-  const { handleDeleteInvestment, isPending } = useDeleteInvestmentModal({ modalProps, setModalProps });
+  const { handleDeleteInvestment, handleCloseDeleteModal, isPending } = useDeleteInvestmentModal({ modalProps, setModalProps });
 
   return (
     <Modal
@@ -23,7 +23,7 @@ const DeleteInvestmentModal = ({ modalProps, setModalProps  }: DeleteInvestmentM
               onClick={handleDeleteInvestment}
             />
             <Button
-              onClick={() => setModalProps({ ...modalProps, isOpen: false })}
+              onClick={handleCloseDeleteModal}
               name='Cancel'
               type='primary'
               showLoadingIcon={isPending}

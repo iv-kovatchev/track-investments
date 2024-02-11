@@ -67,11 +67,12 @@ const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) =
       name: 'Gold',
       color: '#52B788',
       value: sumInvestmentsFromType( 'Gold', investments)
-    },{
+    },
+    {
       name: 'Property',
-      color: '#95D5B2',
+      color: '#1B4332',
       value: sumInvestmentsFromType( 'Property', investments)
-    }];
+    }].filter((invs) => invs.value > 0);
 
   const activeInvestments = investments?.filter((investment) => investment.status === 'Active').length;
   const closedInvestments = investments?.filter((investment) => investment.status === 'Closed').length;

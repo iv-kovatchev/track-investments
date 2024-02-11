@@ -46,4 +46,11 @@
     display: flex;
     justify-content: center;
   }
+
+  &__no-data {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
 }

@@ -15,23 +15,23 @@ const tableData = [
   {
     name: 'Test1',
     status: 'ACTIVE',
-    date: new Date().toLocaleDateString(),
+    date: new Date ().toLocaleDateString (),
     value: 2222.22,
-    button: <Button name='Delete' type='primary'/>
+    button: <Button name="Delete" type="primary"/>
   },
   {
     name: 'Test2',
     status: 'ACTIVE',
-    date: new Date().toLocaleDateString(),
+    date: new Date ().toLocaleDateString (),
     value: 2222.22,
-    button: <Button name='Delete' type='primary'/>
+    button: <Button name="Delete" type="primary"/>
   },
   {
     name: 'Test3',
     status: 'ACTIVE',
-    date: new Date().toLocaleDateString(),
+    date: new Date ().toLocaleDateString (),
     value: 2222.22,
-    button: <Button name='Delete' type='primary'/>
+    button: <Button name="Delete" type="primary"/>
   }
 ];
 
@@ -59,18 +59,18 @@ const options = [
 ];
 
 const Styleguide = () => {
-  const [ testState, setTestState ] = useState(true);
-  const [ currentOption, setCurrentOption ] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [testState, setTestState] = useState (true);
+  const [currentOption, setCurrentOption] = useState<string | null> (null);
+  const [isModalOpen, setIsModalOpen] = useState (false);
 
-  console.log(currentOption);
+  console.log (currentOption);
 
-  const handleSelectChange = (option: SelectOption) => setCurrentOption(option.label);
+  const handleSelectChange = (option: SelectOption) => setCurrentOption (option.label);
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleOpenModal = () => setIsModalOpen (true);
+  const handleCloseModal = () => setIsModalOpen (false);
 
-  const handleClick = () => setTestState(!testState);
+  const handleClick = () => setTestState (!testState);
   return (
     <>
       <div className="test">Test sass</div>
@@ -153,38 +153,19 @@ const Styleguide = () => {
           },
           {
             name: 'Stocks',
-            color: '#40916C',
-            value: 11200
-          },
-          {
-            name: 'Land',
-            color: '#95D5B2',
-            value: 11200
-          },
-          {
-            name: 'Casha',
             color: '#2D6A4F',
-            value: 55
+            value: 112000
           },
           {
             name: 'Gold',
             color: '#52B788',
-            value: 5435
-          }, {
-            name: 'Landa',
-            color: '#95D5B2',
-            value: 66
+            value: 2344
           },
           {
-            name: 'Cash',
-            color: '#2D6A4F',
-            value: 2222
+            name: 'Property',
+            color: '#1B4332',
+            value: 77777
           },
-          {
-            name: 'Gold',
-            color: '#52B788',
-            value: 11200
-          }
         ]}
                   radiusProps={{
                     innerRadius: 120,
@@ -202,11 +183,11 @@ const Styleguide = () => {
       <br/>
 
       <div>
-        <Button name='Open modal' type='primary' onClick={handleOpenModal} />
+        <Button name="Open modal" type="primary" onClick={handleOpenModal}/>
         {isModalOpen &&
           <Modal
             onClose={handleCloseModal}
-            title='Test modal!'
+            title="Test modal!"
             children={<p>This is my modal</p>}
           />
         }

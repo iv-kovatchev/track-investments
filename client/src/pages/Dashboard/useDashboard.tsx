@@ -29,7 +29,7 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
     }
 
     return (
-      <div className="dashboard__table-delete-icon">
+      <div key={investmentId} className="dashboard__table-delete-icon">
         <MdDeleteSweep onClick={handleDeleteInvestment}/>
       </div>
     )
@@ -55,7 +55,7 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
         value: investment.value,
         status: investment.status,
         date: investment.date,
-        closeButton: <CloseButton investment={investment}/>,
+        closeButton: <CloseButton key={investment.id} investment={investment}/>,
       }
 
       if (currentUser)

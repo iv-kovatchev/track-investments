@@ -1,5 +1,6 @@
 import { deleteInvestment } from '../../../services/investmentsService';
 import { UseDeleteInvestmentModalProps } from './types';
+import { useEffect } from 'react';
 
 const useDeleteInvestmentModal = ({
   modalProps,
@@ -13,12 +14,17 @@ const useDeleteInvestmentModal = ({
     alert('There is network error');
   }
 
-  if(isSuccess) {
-    setModalProps({ ...modalProps, isOpen: false });
-  }
+  useEffect (() => {
+    if(isSuccess) {
+      setModalProps({ ...modalProps, isOpen: false });
+    }
+  }, [isSuccess, modalProps, setModalProps]);
+
+  const handleCloseDeleteModal = () => setModalProps({ ...modalProps, isOpen: false })
 
   return {
     handleDeleteInvestment,
+    handleCloseDeleteModal,
     isPending
   }
 }

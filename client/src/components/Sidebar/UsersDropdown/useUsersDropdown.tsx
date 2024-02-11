@@ -4,7 +4,7 @@ import { SelectOption } from '../../shared/Select/types';
 import { UserContext } from '../../../utils/contexts/UserContext';
 
 const useUsersDropdown = () => {
-  const { data, isLoading, isError, error  } = getAllUsers();
+  const { data, isLoading, isError  } = getAllUsers();
 
   const { setCurrentUser } = useContext(UserContext);
 

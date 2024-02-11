@@ -62,9 +62,9 @@ const PieChartComponent = ({
           dataKey="value"
           onMouseEnter={onPieEnter}
         >
-          {data?.map ((entry, index) => (
+          {data?.map ((entry) => (
             <Cell
-              key={`cell-${index}`}
+              key={entry.name}
               fill={entry.color}
               style={{outline: 'none'}}
             />

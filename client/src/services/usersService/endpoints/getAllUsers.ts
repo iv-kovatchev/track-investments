@@ -3,7 +3,7 @@ import { fetchData } from '../../index';
 import { User } from '../types';
 
 const useGetAllUsers = () => {
-  const { data, isLoading, isError, error, ...args } = useQuery<User[], Error>({
+  const { data, isLoading, isError, ...args } = useQuery<User[], Error>({
     queryKey: ['allUsers'],
     queryFn: () => fetchData('users')
   });
@@ -12,7 +12,6 @@ const useGetAllUsers = () => {
     data,
     isLoading,
     isError,
-    error,
     args
   }
 };

@@ -29,7 +29,7 @@ const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) 
           isOpen && options.map((option, index) => { return (
             <div
               onClick={() => handleSelectedOption(option)}
-              key={index}
+              key={option.value}
               className='select__option'>
               <p>{option.label}</p>
             </div>

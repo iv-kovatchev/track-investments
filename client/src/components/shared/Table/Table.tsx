@@ -14,7 +14,7 @@ const Table = <T extends object> ({columns, data, extendClassname, isLoading = f
           <table className={`table ${extendClassname ?? ''}`}>
             <thead className="table__thead">
             <tr>
-              {columns.map ((column, index) => {
+              {columns.map((column, index) => {
                 return (<th key={index} className="table__th">{column}</th>)
               })}
             </tr>
@@ -23,7 +23,7 @@ const Table = <T extends object> ({columns, data, extendClassname, isLoading = f
             {
               data.map ((rowData, index) => (
                 <tr key={index}>
-                  {Object.entries (rowData).map (([_, v], index) => (
+                  {Object.entries (rowData).map(([_, v], index) => (
                       <td key={index} className="table__td">{v}</td>
                     )
                   )}
