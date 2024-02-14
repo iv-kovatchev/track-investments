@@ -5,10 +5,11 @@ import { useState } from 'react';
 
 const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) => {
   const [ isOpen, setIsOpen ] = useState(false);
-
   const handleOpenMenu = () => {
     setIsOpen(!isOpen);
   }
+
+  console.log(selectedValue);
 
   const handleSelectedOption = (option: SelectOption) => {
     setIsOpen(!isOpen);
@@ -18,7 +19,7 @@ const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) 
   return (
     <div className='select'>
       <div className='select__main' onClick={handleOpenMenu}>
-        <p>{selectedValue ?? placeholder}</p>
+        <p>{selectedValue ? selectedValue.label : placeholder}</p>
         <i
           className={`select__arrow-icon ${isOpen ? 'select__arrow-icon--is-open' : ''}`}>
           <IoIosArrowDown/>

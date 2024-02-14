@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@faker-js/faker": "8.4.0",
+    "@hookform/resolvers": "3.3.4",
     "@tanstack/react-query": "5.18.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -13,9 +14,9 @@
     "@types/react": "^18.2.51",
     "@types/react-dom": "^18.2.18",
     "json-server": "^1.0.0-alpha.23",
-    "node-sass": "^9.0.0",
     "rc-table": "7.40.0",
     "react": "^18.2.0",
+    "react-datepicker": "6.1.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "7.50.1",
     "react-icons": "^5.0.1",
@@ -25,14 +26,16 @@
     "recharts": "2.11.0",
     "sass": "^1.70.0",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "3.22.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 3001"
+    "server": "json-server --watch db.json --port 3001",
+    "css": "sass src/assets/styles/index.scss public/index.css"
   },
   "eslintConfig": {
     "extends": [

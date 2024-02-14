@@ -3,13 +3,14 @@ import './Styleguide.scss'
 import Button from '../../components/shared/Button';
 import { FaArrowLeft } from 'react-icons/fa6';
 import Table from '../../components/shared/Table';
-import Select from '../../components/shared/Select';
 import { SelectOption } from '../../components/shared/Select/types';
 import Spinner from '../../components/shared/Spinner';
 import Widget from '../../components/shared/Widget';
 import PieChart from '../../components/shared/Charts/PieChart';
 import TestForm from '../../components/shared/TestForm';
 import Modal from '../../components/shared/Modal';
+import Select from '../../components/shared/Select';
+//import DatePicker from 'react-datepicker';
 
 const tableData = [
   {
@@ -60,15 +61,15 @@ const options = [
 
 const Styleguide = () => {
   const [testState, setTestState] = useState (true);
-  const [currentOption, setCurrentOption] = useState<string | null> (null);
+  const [currentOption, setCurrentOption] = useState<SelectOption | null> (null);
   const [isModalOpen, setIsModalOpen] = useState (false);
 
   console.log (currentOption);
 
-  const handleSelectChange = (option: SelectOption) => setCurrentOption (option.label);
-
   const handleOpenModal = () => setIsModalOpen (true);
   const handleCloseModal = () => setIsModalOpen (false);
+
+  const handleSelectChange = (option: SelectOption) => setCurrentOption(option);
 
   const handleClick = () => setTestState (!testState);
   return (
@@ -191,6 +192,17 @@ const Styleguide = () => {
             children={<p>This is my modal</p>}
           />
         }
+      </div>
+
+      <br/>
+
+      <div>
+      </div>
+
+      <br/>
+
+      <div>
+        {/*<DatePicker />*/}
       </div>
     </>
   )

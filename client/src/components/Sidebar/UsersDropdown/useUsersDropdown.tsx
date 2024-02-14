@@ -8,7 +8,7 @@ const useUsersDropdown = () => {
 
   const { setCurrentUser } = useContext(UserContext);
 
-  const [selectedUser, setSelectUser] = useState<string | null>(null);
+  const [selectedUser, setSelectUser] = useState<SelectOption | null>(null);
 
   const userOptions: SelectOption[] = data?.map((
     { first_name, last_name, id }) =>
@@ -19,7 +19,7 @@ const useUsersDropdown = () => {
   }
 
   const handleSelectedUser = (option: SelectOption) => {
-    setSelectUser(option.label);
+    setSelectUser(option);
     setCurrentUser({
       userId: option.value,
       name: option.label

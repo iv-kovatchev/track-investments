@@ -244,6 +244,68 @@
       "date": "2/11/2024",
       "type": "Stocks",
       "userId": "22"
+    },
+    {
+      "id": "61e01e6d-ad93-4cfa-814c-c86e25a675ab",
+      "name": "Ergonomic Soft Keyboard",
+      "status": "Active",
+      "value": 365182.43,
+      "date": "2/13/2024",
+      "type": "Gold",
+      "userId": "3"
+    },
+    {
+      "id": "fe315a10-e81f-4bc2-9082-bc230833d2ec",
+      "name": "Oriental Rubber Cheese",
+      "status": "Active",
+      "value": 388734.08,
+      "date": "2/13/2024",
+      "type": "Gold",
+      "userId": "3"
+    },
+    {
+      "id": "ed7dcb26-3f79-41dc-9ea9-ab29de4791ce",
+      "name": "Oriental Soft Pizza",
+      "status": "Active",
+      "value": 271695.63,
+      "date": "2/13/2024",
+      "type": "Cash",
+      "userId": "3"
+    },
+    {
+      "id": "8601ae80-43ff-4cbf-aaa3-faa2e0ff2dba",
+      "name": "ddd",
+      "value": 222,
+      "date": "2024-02-14T00:00:00.000Z",
+      "type": "Cash",
+      "status": "Active"
+    },
+    {
+      "id": "62c8f0c1-30cf-410c-afdf-bf469ab42f4e",
+      "name": "ddd",
+      "value": 222,
+      "date": "2024-02-14T00:00:00.000Z",
+      "type": "Cash",
+      "status": "Active",
+      "userId": "2"
+    },
+    {
+      "id": "e1a7774f-e684-4e44-bf36-cf35b9918eb9",
+      "name": "ddd",
+      "value": 222,
+      "date": "2024-02-14T00:00:00.000Z",
+      "type": "Cash",
+      "status": "Active",
+      "userId": "2"
+    },
+    {
+      "id": "2d38346d-2e6a-4517-8504-0797effe0c13",
+      "name": "ddd",
+      "value": 222222,
+      "date": "2024-02-14T00:00:00.000Z",
+      "type": "Cash",
+      "status": "Active",
+      "userId": "2"
     }
   ]
 }

@@ -12,15 +12,7 @@ const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) =
     isError: isErrorCreateInvestment,
     isPending: isPendingCreateInvestment,
     addInvestment
-  } = createInvestment({
-    id: faker.string.uuid(),
-    name: faker.commerce.productName(),
-    status: 'Active',
-    value: faker.number.float({ min: 1, max: 500000, fractionDigits: 2 }),
-    date: new Date().toLocaleDateString(),
-    type: getRandomType(),
-    userId: currentUser?.userId
-  });
+  } = createInvestment();
 
   if(isErrorCreateInvestment) {
     alert('There is network error')
@@ -33,7 +25,15 @@ const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) =
     }
     else {
       setAddInvestmentError(false);
-      addInvestment();
+      addInvestment({
+        id: faker.string.uuid(),
+        name: faker.commerce.productName(),
+        status: 'Active',
+        value: faker.number.float({ min: 1, max: 500000, fractionDigits: 2 }),
+        date: new Date().toLocaleDateString(),
+        type: getRandomType(),
+        userId: currentUser?.userId
+      });
     }
   }
 

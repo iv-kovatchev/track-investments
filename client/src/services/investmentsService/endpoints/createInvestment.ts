@@ -2,12 +2,12 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { mutationData } from '../../index';
 import { Investment } from '../types';
 
-const useCreateInvestment = (investment: Investment) => {
+const useCreateInvestment = () => {
   const queryClient = useQueryClient();
 
   const { mutate: addInvestment, data, isError, isPending, ...args  } = useMutation({
     mutationKey: ['createInvestment'],
-    mutationFn: () => mutationData<Investment>({
+    mutationFn: (investment: Investment) => mutationData<Investment>({
       url: 'investments',
       method: 'POST',
       data: investment

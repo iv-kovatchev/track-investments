@@ -4,3 +4,13 @@
   width: 200px;
   box-shadow: var(--box-shadow);
 }
+
+.testForm {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+}
