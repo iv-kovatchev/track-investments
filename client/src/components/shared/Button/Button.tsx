@@ -5,7 +5,8 @@ import Spinner from '../Spinner';
 const Button = ({
   externalClassname,
   name,
-  type,
+  type = 'button',
+  btnType,
   icon,
   onClick,
   disabled = false,
@@ -13,9 +14,10 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
+      type={type}
       disabled={disabled}
       onClick={onClick}
-      className={`button button__${type} ${disabled ? 'button__disabled' : ''} ${externalClassname ?? ''}`}
+      className={`button button__${btnType} ${disabled ? 'button__disabled' : ''} ${externalClassname ?? ''}`}
     >
       {showLoadingIcon && <Spinner externalClass='button__loading-icon' />}
       {icon && <i className='button__icon'>{icon}</i>}

@@ -10,7 +10,7 @@
     width: 400px;
     margin-bottom: 24px;
 
-    @include breakpoint-devices('xs-device') {
+    @include breakpoint-devices-max('xs-device') {
       width: 100%;
     }
   }

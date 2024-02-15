@@ -32,7 +32,7 @@
     {
       "id": "9e5bada4-6b23-400a-861e-8cde2a1cd642",
       "name": "Handmade Metal Mouse",
-      "status": "Active",
+      "status": "Closed",
       "value": 217148.4,
       "date": "2/9/2024",
       "type": "Stocks",
@@ -102,15 +102,6 @@
       "userId": "22"
     },
     {
-      "id": "7febcd99-2f24-4a8c-9691-0c6af7a46ee6",
-      "name": "Sleek Rubber Hat",
-      "status": "Active",
-      "value": 59537.1,
-      "date": "2/11/2024",
-      "type": "Land",
-      "userId": "2"
-    },
-    {
       "id": "bb77ba22-b886-4c12-95ce-8c0ea68a61af",
       "name": "Small Rubber Computer",
       "status": "Active",
@@ -131,7 +122,7 @@
     {
       "id": "d92fd777-225c-481d-b826-8135e4a526fb",
       "name": "Rustic Metal Soap",
-      "status": "Active",
+      "status": "Closed",
       "value": 200697.01,
       "date": "2/11/2024",
       "type": "Gold",
@@ -273,37 +264,101 @@
       "userId": "3"
     },
     {
-      "id": "8601ae80-43ff-4cbf-aaa3-faa2e0ff2dba",
-      "name": "ddd",
-      "value": 222,
-      "date": "2024-02-14T00:00:00.000Z",
-      "type": "Cash",
-      "status": "Active"
+      "id": "ee288c99-24a9-4b89-9744-403482673b26",
+      "name": "Gorgeous Bronze Salad",
+      "status": "Active",
+      "value": 217173.13,
+      "date": "2/14/2024",
+      "type": "Gold",
+      "userId": "22"
     },
     {
-      "id": "62c8f0c1-30cf-410c-afdf-bf469ab42f4e",
-      "name": "ddd",
-      "value": 222,
-      "date": "2024-02-14T00:00:00.000Z",
-      "type": "Cash",
+      "id": "7f14d7ef-6592-4f6f-ac4d-3d8dfb1913c4",
+      "name": "test",
+      "value": 334,
+      "date": "2/22/2024",
+      "type": "Crypto",
       "status": "Active",
       "userId": "2"
     },
     {
-      "id": "e1a7774f-e684-4e44-bf36-cf35b9918eb9",
-      "name": "ddd",
+      "id": "9720cd7c-08d7-4fb4-aef1-e4e4d976ce2b",
+      "name": "dsd",
       "value": 222,
-      "date": "2024-02-14T00:00:00.000Z",
-      "type": "Cash",
+      "date": "2/22/2024",
+      "type": "Crypto",
+      "status": "Active",
+      "userId": "22"
+    },
+    {
+      "id": "60f1de0e-831c-418d-8449-d4f4a6c207e9",
+      "name": "sff",
+      "value": 333,
+      "date": "2/21/2024",
+      "type": "Stocks",
       "status": "Active",
       "userId": "2"
     },
     {
-      "id": "2d38346d-2e6a-4517-8504-0797effe0c13",
-      "name": "ddd",
-      "value": 222222,
-      "date": "2024-02-14T00:00:00.000Z",
-      "type": "Cash",
+      "id": "ef554e1a-f152-4bda-875a-219d96720cb2",
+      "name": "asd",
+      "value": 222,
+      "date": "2/21/2024",
+      "type": "Stocks",
+      "status": "Active",
+      "userId": "2"
+    },
+    {
+      "id": "55fd7681-9f6d-4f7e-ba22-fa03fe5749bb",
+      "name": "sssss",
+      "value": 222,
+      "date": "2/21/2024",
+      "type": "Stocks",
+      "status": "Active",
+      "userId": "2"
+    },
+    {
+      "id": "b90ff956-7a6f-4f4e-bb1d-21d13cb1457f",
+      "name": "Land 1",
+      "value": 2222222,
+      "date": "2/27/2024",
+      "type": "Land",
+      "status": "Active",
+      "userId": "2"
+    },
+    {
+      "id": "6edf94e7-1681-47c6-b03c-ad372c9d168d",
+      "name": "test new investment",
+      "value": 30000,
+      "date": "2/29/2024",
+      "type": "Gold",
+      "status": "Active",
+      "userId": "3"
+    },
+    {
+      "id": "4591b02d-1f2b-4c87-9654-3f28714459ae",
+      "name": "test",
+      "value": 5555,
+      "date": "2/21/2024",
+      "type": "Stocks",
+      "status": "Active",
+      "userId": "3"
+    },
+    {
+      "id": "5f77b03a-76a2-402f-bd9a-513abf98d08b",
+      "name": "test",
+      "value": 22222,
+      "date": "2/28/2024",
+      "type": "Gold",
+      "status": "Active",
+      "userId": "3"
+    },
+    {
+      "id": "682ef455-1f59-4291-a7ef-a23f500b2aad",
+      "name": "testt",
+      "value": 22222,
+      "date": "3/1/2024",
+      "type": "Gold",
       "status": "Active",
       "userId": "2"
     }

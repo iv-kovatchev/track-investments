@@ -1,0 +1,51 @@
+@import "src/assets/styles/base/breakpoints";
+
+.create-investment-form {
+  display: flex;
+  flex-direction: column;
+
+  &__input-container {
+    display: flex;
+
+    @include breakpoint-devices-max('xs-device') {
+      flex-direction: column;
+    }
+
+    .create-investment-form__input-field {
+      flex: 1;
+
+      @include breakpoint-devices-min('xs-device') {
+        &:last-child {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  &__input-field {
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    color: var(--dark-green-400);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  &__error {
+    color: var(--error);
+    font-size: var(--fs-small);
+    margin-top: 6px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__submit-button {
+    margin-right: 6px;
+  }
+}

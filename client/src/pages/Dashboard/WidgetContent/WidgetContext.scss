@@ -19,10 +19,6 @@
 
     &--active {
       color: var(--dark-green-100);
-      
-      @include breakpoint-devices('md-device') {
-        color: blue;
-      }
     }
 
     &--closed {

@@ -12,7 +12,7 @@ const CloseButton = ({ investment }: DeleteButtonProps) => {
     <div className='investments-table__delete-button'>
       <Button
         name='Close'
-        type='primary'
+        btnType='primary'
         onClick={handleUpdateInvestment}
         disabled={investment.status === 'Closed' || isPending}
         showLoadingIcon={isPending}

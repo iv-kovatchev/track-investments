@@ -3,10 +3,16 @@ type ButtonType =
   'secondary' |
   'error'
 
+type Type  =
+  'submit' |
+  'reset' |
+  'button'
+
 export interface ButtonProps {
   externalClassname?: string;
   name: string;
-  type: ButtonType;
+  btnType: ButtonType;
+  type?: Type;
   icon?: JSX.Element;
   onClick?: () => void;
   disabled?: boolean;

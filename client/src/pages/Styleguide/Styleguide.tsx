@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "react-datepicker/dist/react-datepicker.css";
 import './Styleguide.scss'
 import Button from '../../components/shared/Button';
 import { FaArrowLeft } from 'react-icons/fa6';
@@ -10,7 +11,7 @@ import PieChart from '../../components/shared/Charts/PieChart';
 import TestForm from '../../components/shared/TestForm';
 import Modal from '../../components/shared/Modal';
 import Select from '../../components/shared/Select';
-//import DatePicker from 'react-datepicker';
+import DateField from '../../components/shared/DateField';
 
 const tableData = [
   {
@@ -18,21 +19,21 @@ const tableData = [
     status: 'ACTIVE',
     date: new Date ().toLocaleDateString (),
     value: 2222.22,
-    button: <Button name="Delete" type="primary"/>
+    button: <Button name="Delete" btnType="primary"/>
   },
   {
     name: 'Test2',
     status: 'ACTIVE',
     date: new Date ().toLocaleDateString (),
     value: 2222.22,
-    button: <Button name="Delete" type="primary"/>
+    button: <Button name="Delete" btnType="primary"/>
   },
   {
     name: 'Test3',
     status: 'ACTIVE',
     date: new Date ().toLocaleDateString (),
     value: 2222.22,
-    button: <Button name="Delete" type="primary"/>
+    button: <Button name="Delete" btnType="primary"/>
   }
 ];
 
@@ -48,14 +49,6 @@ const options = [
   {
     label: 'Gosho',
     value: 'gosho'
-  },
-  {
-    label: 'Ivan',
-    value: 'vankata'
-  },
-  {
-    label: 'Rayna',
-    value: 'rayna'
   }
 ];
 
@@ -63,8 +56,7 @@ const Styleguide = () => {
   const [testState, setTestState] = useState (true);
   const [currentOption, setCurrentOption] = useState<SelectOption | null> (null);
   const [isModalOpen, setIsModalOpen] = useState (false);
-
-  console.log (currentOption);
+  const [startDate, setStartDate] = useState<Date | null>(null);
 
   const handleOpenModal = () => setIsModalOpen (true);
   const handleCloseModal = () => setIsModalOpen (false);
@@ -93,7 +85,7 @@ const Styleguide = () => {
         <div>
           <Button
             name="Primary"
-            type="primary"
+            btnType="primary"
             onClick={handleClick}
             icon={<FaArrowLeft/>}
           />
@@ -104,7 +96,7 @@ const Styleguide = () => {
         <div>
           <Button
             name="Secondary"
-            type="secondary"
+            btnType="secondary"
           />
         </div>
       </div>
@@ -141,6 +133,12 @@ const Styleguide = () => {
         <Widget title="Test widget">
           <div>Lets test</div>
         </Widget>
+      </div>
+
+      <br/>
+
+      <div>
+        <DateField placeholder='Select date' selectedDate={startDate} onChange={setStartDate} />
       </div>
 
       <br/>
@@ -184,7 +182,7 @@ const Styleguide = () => {
       <br/>
 
       <div>
-        <Button name="Open modal" type="primary" onClick={handleOpenModal}/>
+        <Button name="Open modal" btnType="primary" onClick={handleOpenModal}/>
         {isModalOpen &&
           <Modal
             onClose={handleCloseModal}
@@ -197,12 +195,6 @@ const Styleguide = () => {
       <br/>
 
       <div>
-      </div>
-
-      <br/>
-
-      <div>
-        {/*<DatePicker />*/}
       </div>
     </>
   )

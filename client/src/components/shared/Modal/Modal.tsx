@@ -3,7 +3,7 @@ import { ModalProps } from './types';
 import './Modal.scss';
 import { useEffect } from 'react';
 
-const Modal = ({ title, children, onClose }: ModalProps) => {
+const Modal = ({ title, children, onClose, modalSize }: ModalProps) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
@@ -14,16 +14,16 @@ const Modal = ({ title, children, onClose }: ModalProps) => {
 
   return (
     <dialog open className='modal'>
-      <div className='modal__container'>
+      <div className={`modal__container ${modalSize ? `modal__container--${modalSize}` : ''}`}>
         <div className='modal__content'>
-          <h2 className='modal__title'>{title}</h2>
+          {title && <h2 className='modal__title'>{title}</h2>}
           <div className='modal__body'>
             {children}
           </div>
         </div>
         {onClose &&
           <div className='modal__close-button'>
-            <Button name='Close' onClick={onClose} type='primary'/>
+            <Button name='Close' onClick={onClose} btnType='primary'/>
           </div>}
       </div>
     </dialog>

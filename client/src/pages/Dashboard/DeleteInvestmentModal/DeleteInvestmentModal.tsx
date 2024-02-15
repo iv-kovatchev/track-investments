@@ -17,7 +17,7 @@ const DeleteInvestmentModal = ({ modalProps, setModalProps  }: DeleteInvestmentM
             <Button
               externalClassname='delete-investment-modal__confirm-button'
               name='Confirm'
-              type='error'
+              btnType='error'
               showLoadingIcon={isPending}
               disabled={isPending}
               onClick={handleDeleteInvestment}
@@ -25,7 +25,7 @@ const DeleteInvestmentModal = ({ modalProps, setModalProps  }: DeleteInvestmentM
             <Button
               onClick={handleCloseDeleteModal}
               name='Cancel'
-              type='primary'
+              btnType='secondary'
               showLoadingIcon={isPending}
               disabled={isPending}
             />

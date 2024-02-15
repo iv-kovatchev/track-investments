@@ -7,23 +7,31 @@ import { WidgetContextPros } from '../types';
 import './WidgetContext.scss';
 import Spinner from '../../../components/shared/Spinner';
 import Skeleton from 'react-loading-skeleton';
+import CreateInvestmentModal from '../CreateInvestmentModal';
 
 const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
   const {currentUser} = useContext (UserContext);
 
   const {
     pieChartData,
-    handleAddInvestment,
     addInvestmentError,
-    isPendingCreateInvestment,
     activeInvestments,
-    closedInvestments
+    closedInvestments,
+    handleCreateInvestmentModal,
+    isCreateInvestmentModalOpen,
+    setIsCreateInvestmentModalOpen
   } = useWidgetContext ({currentUser, investments});
 
   console.log (investments?.length);
 
   return (
     <section className="dashboard-widget">
+      {isCreateInvestmentModalOpen && currentUser &&
+        <CreateInvestmentModal
+          setIsCreateInvestmentModalOpen={setIsCreateInvestmentModalOpen}
+          currentUser={currentUser}
+        />}
+
       {isLoading ?
         <div className="dashboard-widget__skeleton">
           <Skeleton height={30}/>
@@ -66,10 +74,8 @@ const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
       <div className="dashboard-widget__add-button">
         <Button
           name="Add investment"
-          type="primary"
-          disabled={isPendingCreateInvestment || isLoading}
-          showLoadingIcon={isPendingCreateInvestment || isLoading}
-          onClick={handleAddInvestment}/>
+          btnType="primary"
+          onClick={handleCreateInvestmentModal}/>
         {addInvestmentError &&
           <p className="dashboard__add-button-error">First you need to choose a user from the sidebar</p>}
       </div>

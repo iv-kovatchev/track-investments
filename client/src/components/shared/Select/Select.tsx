@@ -9,8 +9,6 @@ const Select = ({ onChange, selectedValue, options, placeholder }: SelectProps) 
     setIsOpen(!isOpen);
   }
 
-  console.log(selectedValue);
-
   const handleSelectedOption = (option: SelectOption) => {
     setIsOpen(!isOpen);
     onChange(option)

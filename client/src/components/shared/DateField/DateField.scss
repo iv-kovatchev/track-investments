@@ -1,0 +1,90 @@
+.datefield {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    font-size: var(--fs-small);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    color: var(--dark-green-400);
+    padding: 0 4px;
+    margin: 0 4px;
+    transition: .1s ease-in-out;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    width: 100%;
+
+    .react-datepicker__input-container input {
+      border: 1px solid var(--dark-green-200);
+      border-radius: 6px;
+      padding: 8px;
+      color: var(--dark-green-400);
+      font-size: var(--fs-small);
+      font-weight: var(--fw-normal);
+      letter-spacing: var(--letter-spacing);
+      line-height: var(--line-height-small);
+      width: 100%;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  &__popper {
+    z-index: 101 !important;
+
+    .react-datepicker {
+      border: 1px solid var(--dark-green-200);
+    }
+
+    .react-datepicker__header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--dark-green-200);
+    }
+
+    .react-datepicker__navigation-icon {
+      &:before {
+        border-color: var(--dark-green-400);
+      }
+    }
+
+    .react-datepicker__day-name,
+    .react-datepicker__current-month {
+      color: var(--dark-green-400);
+    }
+
+    .react-datepicker__day, .react-datepicker__keyboard-selected {
+      background-color: var(--white);
+      border: 1px solid var(--white);
+      color: var(--dark-green-200);
+
+      &:hover {
+        border: 1px solid var(--dark-green-200);
+        background-color: var(--white);
+        border-radius: 16px;
+      }
+
+      &--selected {
+        background-color: var(--dark-green-200);
+        border-radius: 16px;
+        color: var(--white);
+
+        &:hover {
+          background-color: var(--dark-green-200);
+        }
+      }
+    }
+
+    .datefield__label {
+      color: var(--dark-green-200);
+      top: 0;
+      transform: translateY(-50%) scale(.9);
+    }
+  }
+}

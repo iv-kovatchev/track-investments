@@ -1,39 +1,19 @@
 import { useState } from 'react';
-import { createInvestment } from '../../../services/investmentsService';
-import { faker } from '@faker-js/faker';
-import { getRandomType } from '../../../utils/randomType';
 import { UseWidgetContextProps } from '../types';
 import { Investment } from '../../../services/investmentsService/types';
 
 const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) => {
   const [addInvestmentError, setAddInvestmentError] = useState(false);
+  const [isCreateInvestmentModalOpen, setIsCreateInvestmentModalOpen] = useState<boolean>(false);
 
-  const {
-    isError: isErrorCreateInvestment,
-    isPending: isPendingCreateInvestment,
-    addInvestment
-  } = createInvestment();
-
-  if(isErrorCreateInvestment) {
-    alert('There is network error')
-  }
-
-  const handleAddInvestment = () => {
-    //For now it's working like this
+  const handleCreateInvestmentModal = () => {
     if(!currentUser) {
       setAddInvestmentError(true);
+      setIsCreateInvestmentModalOpen(false);
     }
     else {
       setAddInvestmentError(false);
-      addInvestment({
-        id: faker.string.uuid(),
-        name: faker.commerce.productName(),
-        status: 'Active',
-        value: faker.number.float({ min: 1, max: 500000, fractionDigits: 2 }),
-        date: new Date().toLocaleDateString(),
-        type: getRandomType(),
-        userId: currentUser?.userId
-      });
+      setIsCreateInvestmentModalOpen(true);
     }
   }
 
@@ -78,12 +58,13 @@ const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) =
   const closedInvestments = investments?.filter((investment) => investment.status === 'Closed').length;
 
   return {
-    isPendingCreateInvestment,
-    handleAddInvestment,
     addInvestmentError,
     pieChartData,
     activeInvestments,
-    closedInvestments
+    closedInvestments,
+    handleCreateInvestmentModal,
+    isCreateInvestmentModalOpen,
+    setIsCreateInvestmentModalOpen
   }
 }
 

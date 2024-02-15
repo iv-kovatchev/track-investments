@@ -5,7 +5,7 @@ import { Investment } from '../types';
 const useCreateInvestment = () => {
   const queryClient = useQueryClient();
 
-  const { mutate: addInvestment, data, isError, isPending, ...args  } = useMutation({
+  const { mutate: addInvestment, data, isError, isPending, isSuccess, ...args  } = useMutation({
     mutationKey: ['createInvestment'],
     mutationFn: (investment: Investment) => mutationData<Investment>({
       url: 'investments',
@@ -20,6 +20,7 @@ const useCreateInvestment = () => {
     data,
     isError,
     isPending,
+    isSuccess,
     args
   }
 }

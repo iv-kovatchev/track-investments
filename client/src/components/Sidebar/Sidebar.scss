@@ -10,12 +10,12 @@
   padding: 16px;
   position: fixed;
   top: 0;
-  transition: width 0.8s ease;
+  transition: width 0.5s ease;
   transform-origin: left;
   width: 60px;
   z-index: 99;
 
-  @include breakpoint-devices('xs-device') {
+  @include breakpoint-devices-max('xs-device') {
     min-height: 100%;
   }
 
@@ -40,7 +40,7 @@
       color: var(--dark-green-400);
       left: 246px;
       transform: rotate(0deg);
-      transition: left 0.8s ease, tranform 0.8s ease;
+      transition: left 0.5s ease, tranform 0.5s ease;
     }
   }
 
@@ -65,12 +65,13 @@
     height: 24px;
     left: 48px;
     position: absolute;
-    transition: left 0.8s ease;
+    transition: left 0.5s ease;
     transform: rotate(180deg);
     top: 80px;
     width: 24px;
 
     svg {
+      color: var(--dark-green-400);
       height: auto;
       width: 100%;
     }
