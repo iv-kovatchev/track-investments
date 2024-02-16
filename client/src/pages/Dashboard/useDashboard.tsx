@@ -1,14 +1,18 @@
 import { getInvestmentsByUserId } from '../../services/investmentsService';
-import { StateDeleteModalProps, UseInvestmentsProps } from './types';
+import { StateDeleteModalProps, StateEditModalProps, UseInvestmentsProps } from './types';
 import CloseButton from './CloseButton';
 import { MdDeleteSweep } from 'react-icons/md';
 import { useState } from 'react';
+import { FaEdit } from 'react-icons/fa';
+import { Investment } from '../../services/investmentsService/types';
 
 const useDashboard = ({currentUser}: UseInvestmentsProps) => {
   const [deleteModalProps, setDeleteModalProps] = useState<StateDeleteModalProps> ({
     investmentId: '',
     isOpen: false
   });
+
+  const [editModalProps, setEditModalProps] = useState<StateEditModalProps> ({ isOpen: false });
 
   const {
     data,
@@ -20,16 +24,24 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
     alert ('There is network error');
   }
 
-  const deleteInvestment = (investmentId: string) => {
+  const editDeleteInvestment = (investment: Investment) => {
     const handleDeleteInvestment = () => {
       setDeleteModalProps ({
-        investmentId,
+        investmentId: investment.id,
         isOpen: true
       });
     }
 
+    const handleEditInvestment = () => {
+      setEditModalProps({
+        investment,
+        isOpen: true
+      })
+    }
+
     return (
-      <div key={investmentId} className="dashboard__table-delete-icon">
+      <div key={investment.id} className="dashboard__table-delete-edit-icons">
+        <FaEdit onClick={handleEditInvestment}/>
         <MdDeleteSweep onClick={handleDeleteInvestment}/>
       </div>
     )
@@ -40,11 +52,10 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
     'Type',
     'Value',
     'Status',
-    'Date',
-    ''];
+    'Date'];
 
   if(currentUser) {
-    investmentsColumns = [...investmentsColumns, ''];
+    investmentsColumns = [...investmentsColumns, '', ''];
   }
 
   const tableData = data?.map (
@@ -54,15 +65,22 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
         type: investment.type,
         value: investment.value,
         status: investment.status,
-        date: investment.date,
-        closeButton: <CloseButton key={investment.id} investment={investment}/>,
+        date: investment.date
       }
 
-      if (currentUser)
-        return { ...investmentData, deleteButton: deleteInvestment(investment.id) };
+      if (currentUser) {
+        return { ...investmentData,
+          closeButton: <CloseButton key={investment.id} investment={investment}/>,
+          editAndDeleteButtons: editDeleteInvestment(investment)
+        };
+      }
 
       return investmentData;
     });
+
+  const setIsOpen = (isOpen: boolean, investment?: Investment) => {
+    setEditModalProps({ isOpen, investment });
+  }
 
   return {
     isLoadingAllInvestments,
@@ -70,7 +88,9 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
     investmentsColumns,
     tableData,
     deleteModalProps,
-    setDeleteModalProps
+    editModalProps,
+    setDeleteModalProps,
+    setIsOpen
   }
 }
 

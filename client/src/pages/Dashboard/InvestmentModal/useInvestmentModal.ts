@@ -1,25 +1,29 @@
-import { createInvestment } from '../../../services/investmentsService';
+import { createInvestment, updateInvestment } from '../../../services/investmentsService';
 import { useEffect } from 'react';
-import { UseCreateInvestmentModalProps } from './types';
-import { FieldValues, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { schema } from './schema';
+import { UseInvestmentModalProps } from './types';
+import { FieldValues } from 'react-hook-form';
 import { Investment } from '../../../services/investmentsService/types';
 import { faker } from '@faker-js/faker';
 
-const useCreateInvestmentModal = ({
-  setIsCreateInvestmentModalOpen,
-  currentUser
-}: UseCreateInvestmentModalProps) => {
+const useInvestmentModal = ({
+  setIsOpen,
+  currentUser,
+  isEdit
+}: UseInvestmentModalProps) => {
   const { addInvestment, isPending, isError, isSuccess,  } = createInvestment();
+  const { editInvestment,
+    isPending: isEditPending,
+    isError: isEditError,
+    isSuccess: isEditSuccess
+  } = updateInvestment();
 
   useEffect(() => {
-    if(isSuccess) {
-      setIsCreateInvestmentModalOpen(false);
+    if(isSuccess || isEditSuccess) {
+      setIsOpen(false);
     }
-  }, [isSuccess, setIsCreateInvestmentModalOpen]);
+  }, [isSuccess, isEditSuccess, setIsOpen]);
 
-  if(isError) {
+  if(isError || isEditError) {
     alert('There is network error')
   }
 
@@ -36,18 +40,17 @@ const useCreateInvestmentModal = ({
       userId: currentUser.userId
     }
 
-    console.log(investment);
-
     addInvestment(investment);
   }
 
-  const handleClick = () => setIsCreateInvestmentModalOpen(false);
+  const handleClick = () => setIsOpen(false);
 
   return {
     onSubmit,
     handleClick,
-    isPending
+    isPending,
+    isEditPending
   }
 }
 
-export default useCreateInvestmentModal;
+export default useInvestmentModal;

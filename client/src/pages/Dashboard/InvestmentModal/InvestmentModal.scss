@@ -1,6 +1,6 @@
 @import "src/assets/styles/base/breakpoints";
 
-.create-investment-form {
+.investment-form {
   display: flex;
   flex-direction: column;
 
@@ -11,7 +11,7 @@
       flex-direction: column;
     }
 
-    .create-investment-form__input-field {
+    .investment-form__input-field {
       flex: 1;
 
       @include breakpoint-devices-min('xs-device') {

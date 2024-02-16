@@ -24,16 +24,12 @@
     text-align: left;
   }
 
-  &__tbody tr:nth-of-type(even) {
-    background-color: var(--gray-100);
+  &__td {
+    color: var(--dark-green-400);
   }
 
-  &__tbody tr {
-    &:hover {
-      td {
-        color: var(--dark-green-200);
-      }
-    }
+  &__tbody tr:nth-of-type(even) {
+    background-color: var(--gray-100);
   }
 
   &__skeleton {

@@ -6,12 +6,13 @@ const TextField = forwardRef(({
   label,
   type,
   placeholder,
+  value,
   ...props
 }: TextFieldProps, ref: ForwardedRef<HTMLInputElement>) => {
 
   return (
     <div className='textfield'>
-      <input placeholder='' className='textfield__input' type={type} {...props} ref={ref}/>
+      <input placeholder='' className='textfield__input' type={type} {...props} ref={ref} value={value}/>
       <label className='textfield__label'>{label}</label>
     </div>
   )

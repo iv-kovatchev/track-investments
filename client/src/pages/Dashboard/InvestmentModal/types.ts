@@ -1,12 +1,15 @@
 import { CurrentUser } from '../../../utils/contexts/UserContext';
 import { SelectOption } from '../../../components/shared/Select/types';
+import { Investment } from '../../../services/investmentsService/types';
 
-export interface CreateInvestmentModalProps {
-  setIsCreateInvestmentModalOpen: (isOpen: boolean) => void;
-  currentUser: CurrentUser
+export interface InvestmentModalProps {
+  setIsOpen: (isOpen: boolean, investment?: Investment) => void;
+  currentUser: CurrentUser,
+  isEdit: boolean;
+  investment?: Investment;
 }
 
-export interface UseCreateInvestmentModalProps extends CreateInvestmentModalProps {}
+export interface UseInvestmentModalProps extends InvestmentModalProps {}
 
 export const types: SelectOption[] = [
   {

@@ -6,9 +6,9 @@ const useDeleteInvestmentModal = ({
   modalProps,
   setModalProps }: UseDeleteInvestmentModalProps) => {
 
-  const { removeInvestment, isSuccess, isError, isPending } = deleteInvestment(modalProps.investmentId);
+  const { removeInvestment, isSuccess, isError, isPending } = deleteInvestment();
 
-  const handleDeleteInvestment = () => removeInvestment();
+  const handleDeleteInvestment = () => removeInvestment(modalProps.investmentId);
 
   if(isError) {
     alert('There is network error');

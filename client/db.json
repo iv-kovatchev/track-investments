@@ -21,27 +21,9 @@
   ],
   "investments": [
     {
-      "id": "d9841cd3-ae65-4796-ac56-7040282ac9b0",
-      "name": "Fantastic Rubber Bacon",
-      "status": "Closed",
-      "value": 61056.58,
-      "date": "2/9/2024",
-      "type": "Gold",
-      "userId": "22"
-    },
-    {
-      "id": "9e5bada4-6b23-400a-861e-8cde2a1cd642",
-      "name": "Handmade Metal Mouse",
-      "status": "Closed",
-      "value": 217148.4,
-      "date": "2/9/2024",
-      "type": "Stocks",
-      "userId": "22"
-    },
-    {
       "id": "10a2678e-72e4-4fa1-8250-f85f1aaca6eb",
       "name": "Bespoke Fresh Shirt",
-      "status": "Active",
+      "status": "Closed",
       "value": 307272.27,
       "date": "2/9/2024",
       "type": "Crypto",

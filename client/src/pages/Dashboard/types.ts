@@ -21,3 +21,8 @@ export interface StateDeleteModalProps {
   isOpen: boolean;
   investmentId: string;
 }
+
+export interface StateEditModalProps extends
+  Pick<StateDeleteModalProps, 'isOpen'> {
+  investment?: Investment;
+}

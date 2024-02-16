@@ -2,12 +2,12 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { mutationData } from '../../index';
 import { Investment } from '../types';
 
-const useUpdateInvestment = (investment: Investment) => {
+const useUpdateInvestment = () => {
   const queryClient = useQueryClient();
 
-  const { mutate: editInvestment, data, isError, isPending, ...args  } = useMutation({
+  const { mutate: editInvestment, isError, isPending, isSuccess, ...args  } = useMutation({
     mutationKey: ['editInvestment'],
-    mutationFn: () => mutationData<Investment>({
+    mutationFn: (investment: Investment) => mutationData<Investment>({
       url: `investments/${investment.id}`,
       method: 'PUT',
       data: investment
@@ -17,9 +17,9 @@ const useUpdateInvestment = (investment: Investment) => {
 
   return {
     editInvestment,
-    data,
     isError,
     isPending,
+    isSuccess,
     args
   }
 }

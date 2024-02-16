@@ -4,9 +4,9 @@ import './CloseButton.scss';
 import useUpdateInvestment from '../../../services/investmentsService/endpoints/updateInvestment';
 
 const CloseButton = ({ investment }: DeleteButtonProps) => {
-  const { editInvestment, isPending  } = useUpdateInvestment({...investment, status: 'Closed'});
+  const { editInvestment, isPending  } = useUpdateInvestment();
 
-  const handleUpdateInvestment = () => editInvestment();
+  const handleUpdateInvestment = () => editInvestment({...investment, status: 'Closed'});
 
   return (
     <div className='investments-table__delete-button'>

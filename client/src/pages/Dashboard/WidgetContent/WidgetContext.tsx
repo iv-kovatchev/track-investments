@@ -7,7 +7,7 @@ import { WidgetContextPros } from '../types';
 import './WidgetContext.scss';
 import Spinner from '../../../components/shared/Spinner';
 import Skeleton from 'react-loading-skeleton';
-import CreateInvestmentModal from '../CreateInvestmentModal';
+import InvestmentModal from '../InvestmentModal';
 
 const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
   const {currentUser} = useContext (UserContext);
@@ -27,9 +27,10 @@ const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
   return (
     <section className="dashboard-widget">
       {isCreateInvestmentModalOpen && currentUser &&
-        <CreateInvestmentModal
-          setIsCreateInvestmentModalOpen={setIsCreateInvestmentModalOpen}
+        <InvestmentModal
+          setIsOpen={setIsCreateInvestmentModalOpen}
           currentUser={currentUser}
+          isEdit={false}
         />}
 
       {isLoading ?

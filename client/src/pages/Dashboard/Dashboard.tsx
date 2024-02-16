@@ -6,6 +6,7 @@ import './Dashboard.scss';
 import Widget from '../../components/shared/Widget';
 import WidgetContext from './WidgetContent';
 import DeleteInvestmentModal from './DeleteInvestmentModal';
+import InvestmentModal from './InvestmentModal';
 
 const Dashboard = (): JSX.Element => {
   const { currentUser} = useContext(UserContext);
@@ -16,10 +17,19 @@ const Dashboard = (): JSX.Element => {
     investmentsColumns,
     tableData,
     deleteModalProps,
-    setDeleteModalProps
+    editModalProps,
+    setDeleteModalProps,
+    setIsOpen
   } = useDashboard({currentUser});
   return (
     <div className="investments">
+      {editModalProps.isOpen && currentUser &&
+        <InvestmentModal
+          setIsOpen={setIsOpen}
+          currentUser={currentUser}
+          isEdit
+          investment={editModalProps.investment}
+        />}
       {deleteModalProps.isOpen &&
         <DeleteInvestmentModal
           modalProps={deleteModalProps}
