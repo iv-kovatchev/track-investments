@@ -1,10 +1,10 @@
-import { CurrentUser } from '../../../utils/contexts/UserContext';
+import { CurrentInvestor } from '../../../utils/contexts/InvestorContext';
 import { SelectOption } from '../../../components/shared/Select/types';
 import { Investment } from '../../../services/investmentsService/types';
 
 export interface InvestmentModalProps {
   setIsOpen: (isOpen: boolean, investment?: Investment) => void;
-  currentUser: CurrentUser,
+  currentInvestor: CurrentInvestor,
   isEdit: boolean;
   investment?: Investment;
 }

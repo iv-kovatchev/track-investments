@@ -3,7 +3,7 @@ import getInvestment from './endpoints/getInvestment';
 import createInvestment from './endpoints/createInvestment';
 import updateInvestment from './endpoints/updateInvestment';
 import deleteInvestment from './endpoints/deleteInvestment';
-import getInvestmentsByUserId from './endpoints/getInvestmentsByUserId';
+import getInvestmentsByInvestorId from './endpoints/getInvestmentsByInvestorId';
 
 export {
   getAllInvestments,
@@ -11,5 +11,5 @@ export {
   createInvestment,
   updateInvestment,
   deleteInvestment,
-  getInvestmentsByUserId
+  getInvestmentsByInvestorId
 };

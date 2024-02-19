@@ -1,4 +1,4 @@
-import { getInvestmentsByUserId } from '../../services/investmentsService';
+import { getInvestmentsByInvestorId } from '../../services/investmentsService';
 import { StateDeleteModalProps, StateEditModalProps, UseInvestmentsProps } from './types';
 import CloseButton from './CloseButton';
 import { MdDeleteSweep } from 'react-icons/md';
@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import { Investment } from '../../services/investmentsService/types';
 
-const useDashboard = ({currentUser}: UseInvestmentsProps) => {
+const useDashboard = ({ currentInvestor }: UseInvestmentsProps) => {
   const [deleteModalProps, setDeleteModalProps] = useState<StateDeleteModalProps> ({
     investmentId: '',
     isOpen: false
@@ -18,7 +18,7 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
     data,
     isLoading: isLoadingAllInvestments,
     isError
-  } = getInvestmentsByUserId (currentUser ? currentUser.userId : '');
+  } = getInvestmentsByInvestorId(currentInvestor ? currentInvestor.investorId : '');
 
   if (isError) {
     alert ('There is network error');
@@ -54,7 +54,7 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
     'Status',
     'Date'];
 
-  if(currentUser) {
+  if(currentInvestor) {
     investmentsColumns = [...investmentsColumns, '', ''];
   }
 
@@ -63,12 +63,12 @@ const useDashboard = ({currentUser}: UseInvestmentsProps) => {
       const investmentData = {
         name: investment.name,
         type: investment.type,
-        value: investment.value,
+        value: investment.value + '$',
         status: investment.status,
         date: investment.date
       }
 
-      if (currentUser) {
+      if (currentInvestor) {
         return { ...investmentData,
           closeButton: <CloseButton key={investment.id} investment={investment}/>,
           editAndDeleteButtons: editDeleteInvestment(investment)

@@ -12,7 +12,7 @@ const useUpdateInvestment = () => {
       method: 'PUT',
       data: investment
     }),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['investmentsByUser'] })
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['investmentsByInvestor'] })
   });
 
   return {

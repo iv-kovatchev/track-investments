@@ -3,14 +3,14 @@ import Root from './Root';
 import Sidebar from './components/Sidebar';
 import { sidebarLinks } from './utils/sidebarLinks';
 import './assets/styles/base/_main.scss';
-import { UserProvider } from './utils/contexts/UserContext';
+import { InvestorProvider } from './utils/contexts/InvestorContext';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
     <>
-      <UserProvider>
+      <InvestorProvider>
         <Sidebar
           isOpen={isSidebarOpen}
           links={sidebarLinks}
@@ -18,7 +18,7 @@ function App() {
         <div className={`rootSection ${isSidebarOpen ? 'rootSection--sidebar-open' : ''}`}>
           <Root />
         </div>
-      </UserProvider>
+      </InvestorProvider>
     </>
   );
 }

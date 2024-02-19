@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Settings = () => {
+const Investors = () => {
   return (
     <>
       <div>Settings page</div>
@@ -10,4 +10,4 @@ const Settings = () => {
   )
 }
 
-export default Settings;
+export default Investors;

@@ -12,7 +12,7 @@ const TextField = forwardRef(({
 
   return (
     <div className='textfield'>
-      <input placeholder='' className='textfield__input' type={type} {...props} ref={ref} value={value}/>
+      <input placeholder='' className='textfield__input' type={type} step={.01} {...props} ref={ref} value={value}/>
       <label className='textfield__label'>{label}</label>
     </div>
   )

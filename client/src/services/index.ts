@@ -1,5 +1,5 @@
-import { requestPause } from '../utils/config/requestPause';
 import { MutationDataProps } from './types';
+import { requestPause } from '../utils/config/requestPause';
 
 const fetchData = async <T>(url: string): Promise<T> => {
   try {

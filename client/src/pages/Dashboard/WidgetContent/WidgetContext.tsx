@@ -1,35 +1,38 @@
 import PieChart from '../../../components/shared/Charts/PieChart';
 import Button from '../../../components/shared/Button';
 import React, { useContext } from 'react';
-import { UserContext } from '../../../utils/contexts/UserContext';
+import { InvestorContext } from '../../../utils/contexts/InvestorContext';
 import useWidgetContext from './useWidgetContext';
 import { WidgetContextPros } from '../types';
 import './WidgetContext.scss';
 import Spinner from '../../../components/shared/Spinner';
 import Skeleton from 'react-loading-skeleton';
 import InvestmentModal from '../InvestmentModal';
+import PieChartTooltip from './PieChartTooltip';
+import useWindowSize from '../../../utils/config/useWindowSize';
 
-const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
-  const {currentUser} = useContext (UserContext);
+const WidgetContext = ({ investments, isLoading }: WidgetContextPros) => {
+  const { currentInvestor } = useContext(InvestorContext);
 
   const {
     pieChartData,
     addInvestmentError,
     activeInvestments,
     closedInvestments,
+    totalInvestmentsValue,
     handleCreateInvestmentModal,
     isCreateInvestmentModalOpen,
     setIsCreateInvestmentModalOpen
-  } = useWidgetContext ({currentUser, investments});
+  } = useWidgetContext({ currentInvestor, investments });
 
-  console.log (investments?.length);
+  const windowSize = useWindowSize();
 
   return (
     <section className="dashboard-widget">
-      {isCreateInvestmentModalOpen && currentUser &&
+      {isCreateInvestmentModalOpen && currentInvestor &&
         <InvestmentModal
           setIsOpen={setIsCreateInvestmentModalOpen}
-          currentUser={currentUser}
+          currentInvestor={currentInvestor}
           isEdit={false}
         />}
 
@@ -65,9 +68,10 @@ const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
                 height={400}
                 data={pieChartData}
                 radiusProps={{
-                  innerRadius: 90,
-                  outerRadius: 150
+                  innerRadius: windowSize.width <= 400 ? 70 : (windowSize.width <= 460 ? 80 : 90),
+                  outerRadius: windowSize.width <= 400 ? 100 : (windowSize.width <= 460 ? 120 : 150)
                 }}
+                customTooltip={<PieChartTooltip totalInvestmentsValue={totalInvestmentsValue} />}
               />)
         )
       }
@@ -78,7 +82,7 @@ const WidgetContext = ({investments, isLoading}: WidgetContextPros) => {
           btnType="primary"
           onClick={handleCreateInvestmentModal}/>
         {addInvestmentError &&
-          <p className="dashboard__add-button-error">First you need to choose a user from the sidebar</p>}
+          <p className="dashboard__add-button-error">First you need to choose a investor from the sidebar</p>}
       </div>
     </section>
   )

@@ -14,7 +14,7 @@ import { SelectOption } from '../../../components/shared/Select/types';
 
 const InvestmentModal = ({
   setIsOpen,
-  currentUser,
+  currentInvestor,
   isEdit,
   investment
 }: InvestmentModalProps) => {
@@ -23,7 +23,7 @@ const InvestmentModal = ({
     isEditPending,
     onSubmit,
     handleClick
-  } = useInvestmentModal({setIsOpen, currentUser, isEdit});
+  } = useInvestmentModal({setIsOpen, currentInvestor, isEdit, investment});
   const {
     control,
     register,

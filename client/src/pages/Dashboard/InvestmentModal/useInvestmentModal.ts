@@ -7,8 +7,9 @@ import { faker } from '@faker-js/faker';
 
 const useInvestmentModal = ({
   setIsOpen,
-  currentUser,
-  isEdit
+  currentInvestor,
+  isEdit,
+  investment
 }: UseInvestmentModalProps) => {
   const { addInvestment, isPending, isError, isSuccess,  } = createInvestment();
   const { editInvestment,
@@ -28,19 +29,22 @@ const useInvestmentModal = ({
   }
 
   const onSubmit = (data: FieldValues) => {
-    console.log(data);
-
-    const investment: Investment = {
+    const investmentData: Investment = {
       id: faker.string.uuid(),
       name: data.name,
       value: data.value,
       date: data.date.toLocaleDateString(),
       type: data.type.value,
       status: 'Active',
-      userId: currentUser.userId
+      investorId: currentInvestor.investorId
     }
 
-    addInvestment(investment);
+    if(isEdit && investment) {
+      editInvestment({ ...investmentData, id: investment.id });
+    }
+    else {
+      addInvestment(investmentData);
+    }
   }
 
   const handleClick = () => setIsOpen(false);

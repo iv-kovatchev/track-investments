@@ -17,5 +17,5 @@ export interface Investment {
   date: string,
   value: number,
   type: Type,
-  userId: string
+  investorId: string
 }

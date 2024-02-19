@@ -11,7 +11,7 @@ const useDeleteInvestment = () => {
       url: `investments/${id}`,
       method: 'DELETE'
     }),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['investmentsByUser'] })
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['investmentsByInvestor'] })
   });
 
   return {

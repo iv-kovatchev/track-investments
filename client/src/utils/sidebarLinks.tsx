@@ -8,8 +8,8 @@ export const sidebarLinks: Link[] = [
     icon: <FaHandHoldingDollar />
   },
   {
-    name: 'Settings',
-    path: '/settings',
+    name: 'Investors',
+    path: '/investors',
     icon: <FaGear />
   }
 ];

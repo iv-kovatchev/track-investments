@@ -4,7 +4,7 @@ import { SidebarProps } from './types';
 import SidebarLink from './SidebarLink';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 import useSidebar from './useSidebar';
-import UsersDropdown from './UsersDropdown';
+import InvestorsDropdown from './InvestorsDropdown';
 
 const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
   const { handleCollapse } = useSidebar({ isOpen, collapseSidebar })
@@ -16,7 +16,7 @@ const Sidebar = ({ links, isOpen, collapseSidebar }: SidebarProps) => {
           <h2 className='sidebar__title'>Track Investments</h2>
       </div>
 
-      <UsersDropdown />
+      <InvestorsDropdown />
 
       <div>
         <ul>

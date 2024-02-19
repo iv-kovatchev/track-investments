@@ -1,5 +1,5 @@
 {
-  "users": [
+  "investors": [
     {
       "id": "22",
       "first_name": "Ivan",
@@ -27,7 +27,7 @@
       "value": 307272.27,
       "date": "2/9/2024",
       "type": "Crypto",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "401303fa-4f2b-49c0-a89c-27fc8cf3d71d",
@@ -36,7 +36,7 @@
       "value": 326379.38,
       "date": "2/11/2024",
       "type": "Stocks",
-      "userId": "11"
+      "investorId": "11"
     },
     {
       "id": "40c539ae-c8da-4694-9ce0-061cf4505436",
@@ -45,7 +45,7 @@
       "value": 177094.96,
       "date": "2/11/2024",
       "type": "Stocks",
-      "userId": "11"
+      "investorId": "11"
     },
     {
       "id": "13c6c72f-613e-4ee6-b228-f7b905dca5e3",
@@ -54,7 +54,7 @@
       "value": 460684.25,
       "date": "2/11/2024",
       "type": "Crypto",
-      "userId": "11"
+      "investorId": "11"
     },
     {
       "id": "b64d8e98-8c46-4eb7-a41a-8379c568f745",
@@ -63,7 +63,7 @@
       "value": 350812.81,
       "date": "2/11/2024",
       "type": "Land",
-      "userId": "11"
+      "investorId": "11"
     },
     {
       "id": "24c7ad0b-0602-4940-9a90-17d8be99f542",
@@ -72,7 +72,7 @@
       "value": 467924.02,
       "date": "2/11/2024",
       "type": "Crypto",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "9a6f33a2-0362-49fb-916d-7d191c47fa57",
@@ -81,7 +81,7 @@
       "value": 298413.51,
       "date": "2/11/2024",
       "type": "Crypto",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "bb77ba22-b886-4c12-95ce-8c0ea68a61af",
@@ -90,7 +90,7 @@
       "value": 428586.26,
       "date": "2/11/2024",
       "type": "Property",
-      "userId": "2"
+      "investorId": "2"
     },
     {
       "id": "27f4c449-e12f-4140-9917-f4db70bd470d",
@@ -99,7 +99,7 @@
       "value": 246162.35,
       "date": "2/11/2024",
       "type": "Stocks",
-      "userId": "3"
+      "investorId": "3"
     },
     {
       "id": "d92fd777-225c-481d-b826-8135e4a526fb",
@@ -108,25 +108,16 @@
       "value": 200697.01,
       "date": "2/11/2024",
       "type": "Gold",
-      "userId": "3"
-    },
-    {
-      "id": "a0292a9b-16d1-4255-bb7a-e933d97f3ac9",
-      "name": "Intelligent Frozen Computer",
-      "status": "Active",
-      "value": 261273.99,
-      "date": "2/11/2024",
-      "type": "Property",
-      "userId": "22"
+      "investorId": "3"
     },
     {
       "id": "d83c7e3b-ad56-42bb-9a85-a795479a9092",
       "name": "Unbranded Plastic Ball",
-      "status": "Active",
+      "status": "Closed",
       "value": 206903.67,
       "date": "2/11/2024",
       "type": "Stocks",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "dcc3d800-d9f9-42d1-a455-6dee1e3c1d0f",
@@ -135,7 +126,7 @@
       "value": 478081.32,
       "date": "2/11/2024",
       "type": "Property",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "7fc57b94-63b9-46a1-8c3d-5d523bd93d99",
@@ -144,7 +135,7 @@
       "value": 458715.82,
       "date": "2/11/2024",
       "type": "Cash",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "fcdea09c-cadc-4ff4-8e28-bfc9b1a87ef9",
@@ -153,16 +144,16 @@
       "value": 379420.04,
       "date": "2/11/2024",
       "type": "Stocks",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "493e92d7-be95-4ed0-9f39-cbc251aeb673",
       "name": "Handmade Cotton Pizza",
-      "status": "Active",
-      "value": 20105.44,
-      "date": "2/11/2024",
+      "value": 2015.44,
+      "date": "2/20/2024",
       "type": "Land",
-      "userId": "22"
+      "status": "Active",
+      "investorId": "22"
     },
     {
       "id": "cf55a86e-271b-4eca-8c61-35c3174af8b6",
@@ -171,7 +162,7 @@
       "value": 28677.99,
       "date": "2/11/2024",
       "type": "Cash",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "dec4b228-7405-4d57-952c-cded68c4b957",
@@ -180,7 +171,7 @@
       "value": 324650.03,
       "date": "2/11/2024",
       "type": "Cash",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "6dfa20f2-3570-44a6-be61-fc75fe27df71",
@@ -189,7 +180,7 @@
       "value": 31612.9,
       "date": "2/11/2024",
       "type": "Property",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "eaae1a1a-89ea-43a0-8e5a-7b640b65689f",
@@ -198,7 +189,7 @@
       "value": 342274.52,
       "date": "2/11/2024",
       "type": "Cash",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "936ca547-ce92-4f41-9004-8152fb61c448",
@@ -207,7 +198,7 @@
       "value": 411519.3,
       "date": "2/11/2024",
       "type": "Property",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "2b9d11f2-0017-4f85-9a59-f00a3df7ab57",
@@ -216,16 +207,7 @@
       "value": 255107.51,
       "date": "2/11/2024",
       "type": "Stocks",
-      "userId": "22"
-    },
-    {
-      "id": "61e01e6d-ad93-4cfa-814c-c86e25a675ab",
-      "name": "Ergonomic Soft Keyboard",
-      "status": "Active",
-      "value": 365182.43,
-      "date": "2/13/2024",
-      "type": "Gold",
-      "userId": "3"
+      "investorId": "22"
     },
     {
       "id": "fe315a10-e81f-4bc2-9082-bc230833d2ec",
@@ -234,16 +216,16 @@
       "value": 388734.08,
       "date": "2/13/2024",
       "type": "Gold",
-      "userId": "3"
+      "investorId": "3"
     },
     {
       "id": "ed7dcb26-3f79-41dc-9ea9-ab29de4791ce",
       "name": "Oriental Soft Pizza",
-      "status": "Active",
+      "status": "Closed",
       "value": 271695.63,
       "date": "2/13/2024",
       "type": "Cash",
-      "userId": "3"
+      "investorId": "3"
     },
     {
       "id": "ee288c99-24a9-4b89-9744-403482673b26",
@@ -252,7 +234,7 @@
       "value": 217173.13,
       "date": "2/14/2024",
       "type": "Gold",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "7f14d7ef-6592-4f6f-ac4d-3d8dfb1913c4",
@@ -261,7 +243,7 @@
       "date": "2/22/2024",
       "type": "Crypto",
       "status": "Active",
-      "userId": "2"
+      "investorId": "2"
     },
     {
       "id": "9720cd7c-08d7-4fb4-aef1-e4e4d976ce2b",
@@ -270,7 +252,7 @@
       "date": "2/22/2024",
       "type": "Crypto",
       "status": "Active",
-      "userId": "22"
+      "investorId": "22"
     },
     {
       "id": "60f1de0e-831c-418d-8449-d4f4a6c207e9",
@@ -279,16 +261,16 @@
       "date": "2/21/2024",
       "type": "Stocks",
       "status": "Active",
-      "userId": "2"
+      "investorId": "2"
     },
     {
       "id": "ef554e1a-f152-4bda-875a-219d96720cb2",
-      "name": "asd",
-      "value": 222,
-      "date": "2/21/2024",
-      "type": "Stocks",
+      "name": "asd - updated",
+      "value": 22222.33,
+      "date": "2/22/2024",
+      "type": "Cash",
       "status": "Active",
-      "userId": "2"
+      "investorId": "2"
     },
     {
       "id": "55fd7681-9f6d-4f7e-ba22-fa03fe5749bb",
@@ -297,7 +279,7 @@
       "date": "2/21/2024",
       "type": "Stocks",
       "status": "Active",
-      "userId": "2"
+      "investorId": "2"
     },
     {
       "id": "b90ff956-7a6f-4f4e-bb1d-21d13cb1457f",
@@ -306,7 +288,7 @@
       "date": "2/27/2024",
       "type": "Land",
       "status": "Active",
-      "userId": "2"
+      "investorId": "2"
     },
     {
       "id": "6edf94e7-1681-47c6-b03c-ad372c9d168d",
@@ -315,7 +297,7 @@
       "date": "2/29/2024",
       "type": "Gold",
       "status": "Active",
-      "userId": "3"
+      "investorId": "3"
     },
     {
       "id": "4591b02d-1f2b-4c87-9654-3f28714459ae",
@@ -324,7 +306,7 @@
       "date": "2/21/2024",
       "type": "Stocks",
       "status": "Active",
-      "userId": "3"
+      "investorId": "3"
     },
     {
       "id": "5f77b03a-76a2-402f-bd9a-513abf98d08b",
@@ -333,7 +315,7 @@
       "date": "2/28/2024",
       "type": "Gold",
       "status": "Active",
-      "userId": "3"
+      "investorId": "3"
     },
     {
       "id": "682ef455-1f59-4291-a7ef-a23f500b2aad",
@@ -342,7 +324,25 @@
       "date": "3/1/2024",
       "type": "Gold",
       "status": "Active",
-      "userId": "2"
+      "investorId": "2"
+    },
+    {
+      "id": "9395fd18-377c-4cc3-b6a1-5fdfe02fdfa4",
+      "name": "Bespoke Fresh Shirttt",
+      "value": 307272,
+      "date": "2/21/2024",
+      "type": "Crypto",
+      "status": "Active",
+      "investorId": "22"
+    },
+    {
+      "id": "e5e812c7-72b4-411f-bcca-0c45b103bb5c",
+      "name": "wow investment",
+      "value": 2233,
+      "date": "2/20/2024",
+      "type": "Cash",
+      "status": "Active",
+      "investorId": "3"
     }
   ]
 }

@@ -1,8 +1,8 @@
-import { CurrentUser } from '../../utils/contexts/UserContext';
+import { CurrentInvestor } from '../../utils/contexts/InvestorContext';
 import { Investment } from '../../services/investmentsService/types';
 
 export interface UseInvestmentsProps {
-  currentUser: CurrentUser | null
+  currentInvestor: CurrentInvestor | null
 }
 
 export interface WidgetContextPros {

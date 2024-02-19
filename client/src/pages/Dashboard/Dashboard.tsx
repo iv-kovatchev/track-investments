@@ -1,7 +1,7 @@
 import Table from '../../components/shared/Table';
 import useDashboard from './useDashboard';
 import React, { useContext } from 'react';
-import { UserContext } from '../../utils/contexts/UserContext';
+import { InvestorContext } from '../../utils/contexts/InvestorContext';
 import './Dashboard.scss';
 import Widget from '../../components/shared/Widget';
 import WidgetContext from './WidgetContent';
@@ -9,7 +9,7 @@ import DeleteInvestmentModal from './DeleteInvestmentModal';
 import InvestmentModal from './InvestmentModal';
 
 const Dashboard = (): JSX.Element => {
-  const { currentUser} = useContext(UserContext);
+  const { currentInvestor} = useContext(InvestorContext);
 
   const {
     data,
@@ -20,13 +20,13 @@ const Dashboard = (): JSX.Element => {
     editModalProps,
     setDeleteModalProps,
     setIsOpen
-  } = useDashboard({currentUser});
+  } = useDashboard({ currentInvestor });
   return (
     <div className="investments">
-      {editModalProps.isOpen && currentUser &&
+      {editModalProps.isOpen && currentInvestor &&
         <InvestmentModal
           setIsOpen={setIsOpen}
-          currentUser={currentUser}
+          currentInvestor={currentInvestor}
           isEdit
           investment={editModalProps.investment}
         />}
@@ -38,7 +38,9 @@ const Dashboard = (): JSX.Element => {
 
       <Widget
         externalClass="dashboard__widget"
-        children={<WidgetContext isLoading={isLoadingAllInvestments} investments={data}/>}
+        children={<WidgetContext
+          isLoading={isLoadingAllInvestments}
+          investments={data}/>}
       />
 
       <Table

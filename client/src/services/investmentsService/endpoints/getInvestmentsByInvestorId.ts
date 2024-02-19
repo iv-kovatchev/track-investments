@@ -2,10 +2,10 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchData } from '../../index';
 import { Investment } from '../types';
 
-const useGetInvestmentsByUserId = (userId?: string) => {
+const useGetInvestmentsByInvestorId = (investorId?: string) => {
   const { data, isLoading, isError, ...args } = useQuery<Investment[], Error>({
-    queryKey: ['investmentsByUser', userId],
-    queryFn: () => fetchData(`investments?userId=${userId}`)
+    queryKey: ['investmentsByInvestor', investorId],
+    queryFn: () => fetchData(`investments?investorId=${investorId}`)
   })
 
   return {
@@ -16,4 +16,4 @@ const useGetInvestmentsByUserId = (userId?: string) => {
   }
 }
 
-export default useGetInvestmentsByUserId;
+export default useGetInvestmentsByInvestorId;

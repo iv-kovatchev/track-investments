@@ -8,7 +8,6 @@ import { SelectOption } from '../../components/shared/Select/types';
 import Spinner from '../../components/shared/Spinner';
 import Widget from '../../components/shared/Widget';
 import PieChart from '../../components/shared/Charts/PieChart';
-import TestForm from '../../components/shared/TestForm';
 import Modal from '../../components/shared/Modal';
 import Select from '../../components/shared/Select';
 import DateField from '../../components/shared/DateField';
@@ -171,12 +170,6 @@ const Styleguide = () => {
                     outerRadius: 170
                   }}
         />
-      </div>
-
-      <br/>
-
-      <div>
-        <TestForm/>
       </div>
 
       <br/>

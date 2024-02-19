@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { UseWidgetContextProps } from '../types';
 import { Investment } from '../../../services/investmentsService/types';
 
-const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) => {
+const useWidgetContext = ({ currentInvestor, investments }: UseWidgetContextProps) => {
   const [addInvestmentError, setAddInvestmentError] = useState(false);
   const [isCreateInvestmentModalOpen, setIsCreateInvestmentModalOpen] = useState<boolean>(false);
 
   const handleCreateInvestmentModal = () => {
-    if(!currentUser) {
+    if(!currentInvestor) {
       setAddInvestmentError(true);
       setIsCreateInvestmentModalOpen(false);
     }
@@ -57,11 +57,14 @@ const useWidgetContext = ({ currentUser, investments }: UseWidgetContextProps) =
   const activeInvestments = investments?.filter((investment) => investment.status === 'Active').length;
   const closedInvestments = investments?.filter((investment) => investment.status === 'Closed').length;
 
+  const totalInvestmentsValue = investments?.reduce((total, inv) => total + inv.value, 0);
+
   return {
     addInvestmentError,
     pieChartData,
     activeInvestments,
     closedInvestments,
+    totalInvestmentsValue,
     handleCreateInvestmentModal,
     isCreateInvestmentModalOpen,
     setIsCreateInvestmentModalOpen

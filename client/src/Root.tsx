@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import Settings from './pages/Settings';
+import Investors from './pages/Investors';
 import Dashboard from './pages/Dashboard';
 import Styleguide from './pages/Styleguide';
 import Grid from './components/shared/Grid';
@@ -19,11 +19,11 @@ const Root = () => {
             />
           )}
           <Route
-            path='/settings'
+            path='/investors'
             element={
               <Grid
-                title='Settings'
-                child={<Settings />}
+                title='Investors'
+                child={<Investors />}
               />}
           />
           <Route path='/styleguide' element={<Styleguide />} />
